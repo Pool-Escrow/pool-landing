@@ -1,19 +1,53 @@
 {
-  "name": "pool-landing",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/check": "^0.9.3",
-    "@astrojs/tailwind": "^5.1.0",
-    "astro": "^4.15.3",
-    "tailwindcss": "^3.4.10",
-    "typescript": "^5.5.4"
-  }
+    "name": "pool-landing",
+    "type": "module",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "astro dev",
+        "start": "astro dev",
+        "build": "astro check && astro build",
+        "preview": "astro preview",
+        "astro": "astro"
+    },
+    "dependencies": {
+        "@astrojs/check": "^0.9.3",
+        "@astrojs/tailwind": "^5.1.0",
+        "@fontsource/comfortaa": "^5.0.21",
+        "@fontsource/inter": "^5.0.20",
+        "astro": "^4.15.3",
+        "tailwindcss": "^3.4.10",
+        "typescript": "^5.5.4"
+    },
+    "devDependencies": {
+        "prettier": "^3.3.3",
+        "prettier-plugin-astro": "^0.14.1",
+        "prettier-plugin-tailwindcss": "^0.6.6"
+    },
+    "prettier": {
+        "arrowParens": "avoid",
+        "bracketSameLine": true,
+        "bracketSpacing": true,
+        "endOfLine": "lf",
+        "jsxSingleQuote": true,
+        "printWidth": 120,
+        "proseWrap": "preserve",
+        "quoteProps": "consistent",
+        "semi": false,
+        "singleQuote": true,
+        "trailingComma": "all",
+        "useTabs": false,
+        "tabWidth": 4,
+        "plugins": [
+            "prettier-plugin-astro",
+            "prettier-plugin-tailwindcss"
+        ],
+        "overrides": [
+            {
+                "files": "*.astro",
+                "options": {
+                    "parser": "astro"
+                }
+            }
+        ]
+    }
 }
