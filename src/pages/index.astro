@@ -1,0 +1,16 @@
+---
+import Features from '@/components/features.astro'
+import Header from '../components/header.astro'
+import RootLayout from '../layouts/root-layout.astro'
+import Footer from '@/components/footer.astro'
+import Hero from '@/components/hero.astro'
+---
+
+<RootLayout title='Home'>
+    <Header />
+    <main class='grow'>
+        <Hero />
+        <Features />
+    </main>
+    <Footer />
+</RootLayout>
