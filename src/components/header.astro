@@ -9,14 +9,18 @@
 
 <script>
     const header = document.getElementById('main-header')
-    let lastScrollY = window.scrollY
 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > lastScrollY) {
-            header?.classList.add('bg-black', 'bg-opacity-30')
+    function updateHeaderBackground() {
+        if (window.scrollY > 0) {
+            header?.classList.add('bg-black', 'bg-opacity-20')
         } else {
-            header?.classList.remove('bg-black', 'bg-opacity-30')
+            header?.classList.remove('bg-black', 'bg-opacity-20')
         }
-        lastScrollY = window.scrollY
-    })
+    }
+
+    // Refresh on load
+    updateHeaderBackground()
+
+    // Update on scroll
+    window.addEventListener('scroll', updateHeaderBackground)
 </script>
