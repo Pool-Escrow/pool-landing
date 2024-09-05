@@ -1,0 +1,92 @@
+---
+import emailIcon from '@/assets/icons/email-icon.png'
+import githubLogo from '@/assets/icons/logos/github-logo.png'
+import xLogo from '@/assets/icons/logos/x-logo.png'
+import { Image } from 'astro:assets'
+
+const socialsContent = [
+    {
+        image: emailIcon,
+        alt: 'Email Icon',
+        link: 'dev@poolparty.cc',
+        type: 'email',
+    },
+    {
+        image: githubLogo,
+        alt: 'Image for joining a pool',
+        link: 'https://www.github.com/poolpartycc',
+        type: 'link',
+    },
+    {
+        image: xLogo,
+        alt: 'Image for enjoy and connect',
+        link: 'https://x.com/poolparty',
+        type: 'link',
+    },
+]
+---
+
+<section class='w-full bg-white px-4 sm:px-8 md:px-14'>
+    <footer
+        class='flex w-full flex-col space-y-6 rounded-t-[40px] bg-[#1B1818] px-4 pb-6 pt-[30px] text-white sm:rounded-t-[60px] sm:px-8 sm:pt-[45px] md:rounded-t-[78px] md:px-[80px] md:pt-[60px]'>
+        <div class='font-logo w-full'>
+            <p class='text-4xl font-semibold text-[#FFBFB1] sm:text-5xl md:text-[72px]'>pool</p>
+        </div>
+        <div class='flex flex-col justify-between space-y-6 sm:flex-row sm:space-y-0'>
+            <div class='text-base font-semibold sm:text-lg md:text-2xl'>
+                Pooling funds <br />
+                made simple
+            </div>
+            <ul class='flex flex-wrap gap-x-4 gap-y-2 text-xs sm:text-sm'>
+                <li class='w-1/2 sm:w-auto'>
+                    <a href='#'>Overview</a>
+                </li>
+                <li class='w-1/2 sm:w-auto'>
+                    <a href='#'>FAQs</a>
+                </li>
+                <li class='w-1/2 sm:w-auto'>
+                    <a href='#'>Contracts</a>
+                </li>
+                <li class='w-1/2 sm:w-auto'>
+                    <a href='mailto:dev@poolparty.cc'>Support</a>
+                </li>
+                <li class='w-1/2 sm:w-auto'>
+                    <a href='#'>How it works</a>
+                </li>
+                <li class='w-1/2 sm:w-auto'>
+                    <a href='#'>Contact Us</a>
+                </li>
+            </ul>
+        </div>
+        <ul class='flex h-6 flex-row space-x-4 sm:space-x-6'>
+            {
+                socialsContent.map(social => {
+                    const linkHref = social.type == 'link' ? social.link : `mailto:${social.link}`
+
+                    return (
+                        <li class='size-5 sm:size-6'>
+                            <a
+                                class='size-full'
+                                href={linkHref}
+                                rel='external noopener noreferrer nofollow'
+                                target='_blank'>
+                                <Image
+                                    src={social.image}
+                                    alt={social.alt}
+                                    class='inline object-contain object-center'
+                                />
+                            </a>
+                        </li>
+                    )
+                })
+            }
+        </ul>
+        <div class='footerDivider w-full'></div>
+        <div
+            class='flex flex-col items-center space-y-2 text-[10px] sm:flex-row sm:space-x-4 sm:space-y-0 sm:text-xs md:space-x-12'>
+            <span>{new Date().getFullYear()} MIT Licensed - All rights reserved - Pool</span>
+            <a href='/privacy-policy'>Privacy</a>
+            <a href='/terms'>Terms</a>
+        </div>
+    </footer>
+</section>

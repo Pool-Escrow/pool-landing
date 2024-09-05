@@ -1,0 +1,16 @@
+---
+// BackButton.astro
+---
+
+<button type='button' class='text-primary underline-offset-4 hover:underline' data-back-button>
+    <slot />
+</button>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const backButton = document.querySelector('[data-back-button]')
+        backButton?.addEventListener('click', () => {
+            window.history.back()
+        })
+    })
+</script>
