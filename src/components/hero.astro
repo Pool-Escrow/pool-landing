@@ -5,6 +5,7 @@ import pinkFlamingo from '@/assets/images/3d-pink-flamingo.png'
 import yellowStar from '@/assets/images/3d-yellow-star.png'
 ---
 
+<section
     class='pb-84 relative z-10 h-[85vh] min-h-[660px] w-full justify-center overflow-clip bg-[#12C4E7] pt-[126px] md:pt-[280px]'>
     <div
         class='float-animation-star absolute left-[-150px] top-[55%] z-0 flex w-full transform sm:top-[80%]'
@@ -62,7 +63,13 @@ import yellowStar from '@/assets/images/3d-yellow-star.png'
 </section>
 
 <div class='relative z-0 w-full'>
-    <Image src={poolHeroBg} alt='pool background' quality={100} sizes='100vw' class='h-auto w-full object-cover' />
+    <Image
+        src={poolHeroBg}
+        alt='pool background'
+        quality={100}
+        sizes='100vw'
+        class='-mt-px h-auto w-full object-cover'
+    />
 </div>
 
 <style>
