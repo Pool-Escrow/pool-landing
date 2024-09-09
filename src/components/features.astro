@@ -13,6 +13,7 @@ import { Image } from 'astro:assets'
 import Header from './header.astro'
 ---
 
+<!-- Partners Logos -->
 <section class='w-full/100 relative mt-20 flex h-[160px] flex-col items-center text-center sm:h-[220px]'>
     <div class='mx-auto w-full max-w-[1420px] px-4'>
         <p class='w-full px-12 text-center text-[22px]'>Partner Ecosystem</p>
@@ -61,60 +62,13 @@ import Header from './header.astro'
     </div>
 </section>
 
-<!-- <section
-    id='video-container'
-    class='relative mx-auto mb-10 mt-10 flex w-full max-w-[1420px] cursor-pointer items-center justify-center text-center sm:mb-40 sm:mt-20'>
-    <div class='relative mx-auto w-full max-w-[calc(100%-24px)] overflow-hidden rounded-[24px] sm:rounded-[64px]'>
-        <div style='padding:56.25% 0 0 0;position:relative;'>
-            <iframe
-                id='vimeoPlayer'
-                src='https://player.vimeo.com/video/1007498354?badge=0&autopause=0&player_id=0&app_id=58479&controls=0'
-                frameborder='0'
-                allow='autoplay; fullscreen; picture-in-picture; clipboard-write'
-                style='position:absolute;top:0;left:0;width:100%;height:100%;'
-                title='pool_event_austin_compressed'></iframe>
-        </div>
-        <div
-            class='controls-container absolute bottom-4 left-4 right-4 flex items-center justify-between gap-4 opacity-0 transition-opacity duration-300'>
-            <div class='flex items-center gap-4'>
-                <button id='playPauseButton' class='p-2'> </button>
-                <input
-                    id='volumeSlider'
-                    type='range'
-                    min='0'
-                    max='1'
-                    step='0.01'
-                    value='1'
-                    class='volume-slider h-1 w-24 rounded-full'
-                />
-            </div>
-            <input
-                id='progressBar'
-                type='range'
-                min='0'
-                max='100'
-                value='0'
-                step='0.1'
-                class='progress-bar h-1 w-full appearance-none rounded-full bg-none'
-            />
-            <button id='expandButton' class='p-2'>
-                <svg xmlns='http://www.w3.org/2000/svg' width='39' height='39' viewBox='0 0 39 39' fill='none'>
-                    <path
-                        d='M12.5202 24.205C12.824 23.9116 13.2308 23.7492 13.6531 23.7529C14.0754 23.7566 14.4794 23.926 14.778 24.2246C15.0767 24.5233 15.2461 24.9273 15.2497 25.3496C15.2534 25.7719 15.0911 26.1788 14.7977 26.4826L10.5004 30.7785H13.0533C13.4481 30.7786 13.829 30.9237 14.1239 31.1862C14.4187 31.4487 14.6069 31.8103 14.6527 32.2024L14.664 32.3892C14.664 32.8164 14.4943 33.2261 14.1922 33.5282C13.8902 33.8303 13.4805 34 13.0533 34H6.61066C6.18349 34 5.77381 33.8303 5.47175 33.5282C5.16969 33.2261 5 32.8164 5 32.3892V25.9462C5 25.519 5.16969 25.1093 5.47175 24.8073C5.77381 24.5052 6.18349 24.3355 6.61066 24.3355C7.03784 24.3355 7.44752 24.5052 7.74957 24.8073C8.05163 25.1093 8.22133 25.519 8.22133 25.9462V28.5025L12.5202 24.205ZM25.9467 34C25.5195 34 25.1098 33.8303 24.8078 33.5282C24.5057 33.2261 24.336 32.8164 24.336 32.3892C24.336 31.962 24.5057 31.5523 24.8078 31.2503C25.1098 30.9482 25.5195 30.7785 25.9467 30.7785H28.4964L24.2039 26.4826C23.9266 26.2053 23.76 25.8362 23.7354 25.4448C23.7108 25.0533 23.8299 24.6663 24.0703 24.3564L24.2039 24.205C24.506 23.903 24.9156 23.7334 25.3427 23.7334C25.7698 23.7334 26.1794 23.903 26.4814 24.205L30.7787 28.5057V25.9462C30.7787 25.5517 30.9236 25.1709 31.1857 24.8761C31.4479 24.5813 31.8091 24.3929 32.2009 24.3468L32.3893 24.3355C32.8165 24.3355 33.2262 24.5052 33.5282 24.8073C33.8303 25.1093 34 25.519 34 25.9462V32.3892C34 32.8164 33.8303 33.2261 33.5282 33.5282C33.2262 33.8303 32.8165 34 32.3893 34H25.9467ZM13.0533 5C13.4805 5 13.8902 5.1697 14.1922 5.47178C14.4943 5.77385 14.664 6.18355 14.664 6.61075C14.664 7.03795 14.4943 7.44765 14.1922 7.74973C13.8902 8.0518 13.4805 8.22151 13.0533 8.22151H10.5036L14.7961 12.519C15.0734 12.7964 15.24 13.1654 15.2646 13.5568C15.2892 13.9483 15.1701 14.3353 14.9297 14.6452L14.7961 14.7966C14.494 15.0986 14.0844 15.2682 13.6573 15.2682C13.2302 15.2682 12.8206 15.0986 12.5186 14.7966L8.22133 10.4959V13.0538C8.22128 13.4483 8.07644 13.8291 7.81429 14.1239C7.55214 14.4187 7.19091 14.6071 6.79911 14.6532L6.61066 14.6645C6.18349 14.6645 5.77381 14.4948 5.47175 14.1927C5.16969 13.8907 5 13.481 5 13.0538V6.61075C5 6.18355 5.16969 5.77385 5.47175 5.47178C5.77381 5.1697 6.18349 5 6.61066 5H13.0533ZM32.3893 5C32.8165 5 33.2262 5.1697 33.5282 5.47178C33.8303 5.77385 34 6.18355 34 6.61075V13.0538C34 13.481 33.8303 13.8907 33.5282 14.1927C33.2262 14.4948 32.8165 14.6645 32.3893 14.6645C31.9622 14.6645 31.5525 14.4948 31.2504 14.1927C30.9484 13.8907 30.7787 13.481 30.7787 13.0538V10.4959L26.4814 14.7966C26.2041 15.0739 25.8351 15.2405 25.4436 15.2652C25.0522 15.2898 24.6652 15.1707 24.3553 14.9303L24.2039 14.7966C23.902 14.4945 23.7324 14.0849 23.7324 13.6578C23.7324 13.2307 23.902 12.8211 24.2039 12.519L28.498 8.22151H25.9467C25.5522 8.22145 25.1714 8.07661 24.8766 7.81444C24.5818 7.55228 24.3935 7.19103 24.3473 6.79921L24.336 6.61075C24.336 6.18355 24.5057 5.77385 24.8078 5.47178C25.1098 5.1697 25.5195 5 25.9467 5H32.3893Z'
-                        fill='#12C4E7'></path>
-                </svg>
-            </button>
-        </div>
-    </div>
-</section> -->
-
+<!-- Video Player -->
 <section
     id='video-container'
     class='relative mx-auto mb-10 mt-10 flex w-full max-w-[1420px] cursor-pointer items-center justify-center text-center sm:mb-40 sm:mt-20'>
     <div
         id='iframeWrapper'
         class='pointer-events-auto relative mx-auto w-full max-w-[calc(100%-24px)] overflow-hidden rounded-[24px] sm:rounded-[64px]'>
-        <!-- Vimeo video iframe -->
         <div style='padding:56.25% 0 0 0;position:relative;'>
             <iframe
                 id='vimeoPlayer'
@@ -158,6 +112,7 @@ import Header from './header.astro'
     </div>
 </section>
 
+<!-- Luma Cards -->
 <section class='w-full/100 relative flex h-full min-h-[1155px] text-[#191C1F]'>
     <div class='mx-auto w-full max-w-[1420px] px-4'>
         <div class='flex w-full flex-col items-center space-y-8 rounded-2xl px-1 py-16 md:mx-0 lg:px-4'>
@@ -246,6 +201,7 @@ import Header from './header.astro'
     </div>
 </section>
 
+<!-- App Preview -->
 <section>
     <div class='mx-auto w-full max-w-[1420px] px-4'>
         <div class='mx-0 flex w-full flex-col items-start space-y-8 rounded-2xl px-1 py-16 md:mx-0 lg:mx-4 lg:px-4'>
@@ -279,6 +235,7 @@ import Header from './header.astro'
     </div>
 </section>
 
+<!-- Styles for video controls -->
 <style>
     #poolVideo::-webkit-media-controls {
         display: none !important;
@@ -324,7 +281,7 @@ import Header from './header.astro'
         -webkit-appearance: none;
         width: 100%;
         height: 20px;
-        background: rgba(224, 224, 224, 0.1); /* 10% opacity */
+        background: rgba(224, 224, 224, 0.1);
         border-radius: 0;
         outline: none;
         transition: background 0.3s ease-in-out;
@@ -335,44 +292,43 @@ import Header from './header.astro'
     .progress-bar::-webkit-slider-thumb {
         -webkit-appearance: none;
         appearance: none;
-        width: 0; /* Hide the thumb */
+        width: 0;
         height: 0;
         background: transparent;
         cursor: pointer;
     }
 
     .progress-bar::-moz-range-thumb {
-        width: 0; /* Hide the thumb */
+        width: 0;
         height: 0;
         background: transparent;
         cursor: pointer;
     }
 
     .progress-bar::-webkit-slider-runnable-track {
-        background: rgba(224, 224, 224, 0.1); /* 10% opacity */
+        background: rgba(224, 224, 224, 0.1);
         border-radius: 0;
         cursor: pointer;
     }
 
     .progress-bar::-moz-range-track {
-        background: rgba(224, 224, 224, 0.1); /* 10% opacity */
+        background: rgba(224, 224, 224, 0.1);
         border-radius: 0;
         cursor: pointer;
     }
 </style>
 
+<!-- Video Player Scripts -->
 <script src='https://player.vimeo.com/api/player.js'></script>
-
 <script>
-    declare const Vimeo: any // Declare Vimeo for TypeScript
+    declare const Vimeo: any
 
     document.addEventListener('DOMContentLoaded', function () {
-        // Initialize Vimeo Player
         const iframe = document.getElementById('vimeoPlayer') as HTMLIFrameElement
         const player = new Vimeo.Player(iframe)
 
-        const videoContainer = document.getElementById('video-container') as HTMLElement // The entire clickable area
-        const iframeWrapper = document.getElementById('iframeWrapper') as HTMLElement // The wrapper around the iframe
+        const videoContainer = document.getElementById('video-container') as HTMLElement
+        const iframeWrapper = document.getElementById('iframeWrapper') as HTMLElement
         const playPauseButton = document.getElementById('playPauseButton') as HTMLButtonElement
         const volumeSlider = document.getElementById('volumeSlider') as HTMLInputElement
         const expandButton = document.getElementById('expandButton') as HTMLButtonElement
@@ -381,7 +337,6 @@ import Header from './header.astro'
 
         if (!player || !playPauseButton || !volumeSlider || !expandButton || !controls) return
 
-        // Enable pointer events on iframeWrapper
         iframeWrapper.style.pointerEvents = 'auto'
 
         // Play/Pause and Update Icon
@@ -395,7 +350,7 @@ import Header from './header.astro'
                 </svg>`
         }
 
-        // Click event to toggle play/pause when clicking anywhere on the video container, except the controls
+        // Click to toggle play/pause when clicking anywhere on the video container, except the controls
         videoContainer.addEventListener('click', function (event) {
             if (!(event.target as HTMLElement).closest('.controls-container')) {
                 player.getPaused().then((paused: boolean) => {
@@ -408,9 +363,9 @@ import Header from './header.astro'
             }
         })
 
-        // Click event for play/pause button
+        // Click for play/pause button
         playPauseButton.addEventListener('click', function (event) {
-            event.stopPropagation() // Prevent event from bubbling up to the container
+            event.stopPropagation()
             player.getPaused().then((paused: boolean) => {
                 if (paused) {
                     player.play()
@@ -438,7 +393,7 @@ import Header from './header.astro'
 
         // Fullscreen Control
         expandButton.addEventListener('click', function (event) {
-            event.stopPropagation() // Prevent event from bubbling up to the container
+            event.stopPropagation()
             player.getFullscreen().then((fullscreen: boolean) => {
                 if (fullscreen) {
                     player.exitFullscreen()
@@ -461,19 +416,16 @@ import Header from './header.astro'
                 </svg>`
         }
 
-        // Progress Bar Update
         function updateProgressBar(currentTime: number, duration: number) {
             const percent = (currentTime / duration) * 100
             progressBar.value = percent.toString()
             progressBar.style.background = `linear-gradient(to right, #12c4e7 ${percent}%, rgba(224, 224, 224, 0.1) ${percent}%)`
         }
 
-        // Update progress bar while playing
         player.on('timeupdate', function (data: { seconds: number; duration: number }) {
             updateProgressBar(data.seconds, data.duration)
         })
 
-        // Seek video on progress bar change
         progressBar.addEventListener('input', function () {
             player.getDuration().then((duration: number) => {
                 const seekTime = (parseFloat(progressBar.value) / 100) * duration
@@ -481,7 +433,6 @@ import Header from './header.astro'
             })
         })
 
-        // Intersection Observer for Autoplay and Pause
         const observer = new IntersectionObserver(
             entries => {
                 entries.forEach(entry => {
