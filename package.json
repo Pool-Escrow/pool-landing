@@ -12,6 +12,7 @@
     "dependencies": {
         "@astrojs/check": "^0.9.3",
         "@astrojs/tailwind": "^5.1.0",
+        "@fontsource-variable/raleway": "^5.0.21",
         "@fontsource/comfortaa": "^5.0.21",
         "@fontsource/inter": "^5.0.20",
         "astro": "^4.15.3",

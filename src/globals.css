@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'Comfortaa-fallback';
-    size-adjust: 116.87%;
-    ascent-override: 70%;
+    font-family: 'Raleway Variable';
+    size-adjust: 100%;
+    font-display: fallback;
     src: local('Arial');
 }
 

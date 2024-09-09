@@ -1,6 +1,6 @@
 ---
 import '@/globals.css'
-import '@fontsource/comfortaa'
+import '@fontsource-variable/raleway'
 import '@fontsource/inter'
 
 const { title } = Astro.props
@@ -12,7 +12,7 @@ const { title } = Astro.props
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Pool Party - {title}</title>
     </head>
-    <body class='flex min-h-dvh flex-col motion-safe:scroll-smooth'>
+    <body class='flex min-h-dvh flex-col overflow-x-hidden bg-[#FFF5E9]/100 motion-safe:scroll-smooth'>
         <slot />
     </body>
 </html>

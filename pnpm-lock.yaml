@@ -14,6 +14,9 @@ importers:
       '@astrojs/tailwind':
         specifier: ^5.1.0
         version: 5.1.0(astro@4.15.3(rollup@4.21.2)(typescript@5.5.4))(tailwindcss@3.4.10)
+      '@fontsource-variable/raleway':
+        specifier: ^5.0.21
+        version: 5.0.21
       '@fontsource/comfortaa':
         specifier: ^5.0.21
         version: 5.0.21
@@ -346,6 +349,9 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [win32]
+
+  '@fontsource-variable/raleway@5.0.21':
+    resolution: {integrity: sha512-k0iaMLLIQ/LazTJdKX5L2VDnHAZPGx1TKT2o3x0HPnyWlF2DvXNvuoQIGUR5GsltBGLhvv/DxBJMfAWfqv5/3w==}
 
   '@fontsource/comfortaa@5.0.21':
     resolution: {integrity: sha512-PwwcbShS5QiGVH2ArOJDK/KowKP/PvZo+AOkValFaH4zReYErfaGteo6eITLq4QOeolkGPs6teXx5aNCpQBdUw==}
@@ -2518,6 +2524,8 @@ snapshots:
 
   '@esbuild/win32-x64@0.21.5':
     optional: true
+
+  '@fontsource-variable/raleway@5.0.21': {}
 
   '@fontsource/comfortaa@5.0.21': {}
 

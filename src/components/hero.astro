@@ -1,54 +1,102 @@
 ---
 import { Image } from 'astro:assets'
-import poolHeroBg from '@/assets/images/pool-hero-bg.png'
-import poolEvent from '@/assets/images/pool-event.png'
+import poolHeroBg from '@/assets/images/hero-section-background-image.png'
+import pinkFlamingo from '@/assets/images/3d-pink-flamingo.png'
+import yellowStar from '@/assets/images/3d-yellow-star.png'
 ---
 
-<div class='absolute inset-0 -z-10 h-3/5'>
-    <Image src={poolHeroBg} alt='pool background' quality={100} sizes='100vw' class='w-full object-cover' />
-</div>
-<section class='container pb-36 pt-16 lg:pt-36'>
-    <div class='flex flex-col gap-10 text-zinc-100 lg:flex-row lg:gap-0'>
-        <div class='flex flex-col justify-center gap-4'>
-            <h1 class='text-4xl font-black uppercase tracking-tighter lg:text-7xl'>
-                Pooling funds
-                <span class='hidden h-0 sm:block'>
-                    <br />
-                </span>{' '}
-                made simple
-            </h1>
+<section class='pb-84 relative z-10 h-[85vh] min-h-[660px] w-full justify-center bg-[#12C4E7] pt-[126px] md:pt-[280px]'>
+    <div
+        class='float-animation-star absolute left-[-150px] top-[55%] z-0 flex w-full transform sm:top-[80%]'
+        style='top: min(75%, 700px);'>
+        <Image
+            class='h-full w-[33%] min-w-[300px] sm:min-w-[440px]'
+            src={yellowStar}
+            quality={100}
+            sizes='100vw'
+            loading='eager'
+            alt='Screenshot of a yellow star floaty'
+        />
+    </div>
 
-            <p class='text-xl font-semibold'>
-                Effortlessly create, fund, and manage your own &apos;Pool parties.&apos;
-                <br />
-                Enjoy a seamless and fun event planning experience.
-            </p>
-            <div
-                class='inline-flex flex-col items-center gap-2 text-nowrap text-base font-semibold *:w-1/2 md:flex-row md:items-start'>
-                <a
-                    href='https://app.poolparty.cc'
-                    class='rounded-full bg-zinc-100/90 py-3 text-center font-semibold text-black transition duration-300 md:px-10'>
-                    Get Started
-                </a>
-                <a
-                    href='/terms'
-                    class='rounded-full py-3 text-center font-semibold transition duration-300 hover:text-opacity-90 md:px-10'>
-                    <span class='hidden sm:inline'>Terms and conditions</span>
-                    <span class='sm:hidden'>Terms</span>
-                </a>
-            </div>
-        </div>
-        <div class='flex w-full justify-center md:w-1/2 lg:justify-end'>
-            <Image
-                class='h-full w-4/5 object-contain'
-                src={poolEvent}
-                width={498}
-                height={666}
-                quality={100}
-                sizes='100vw'
-                loading='eager'
-                alt='Screenshot of the Pool Party app'
-            />
+    <div class='relative z-10 mx-3 flex flex-col items-center justify-center gap-4 lg:pt-[64px]'>
+        <h2 class="relative z-10 text-center font-['Raleway'] text-[22px] font-extrabold text-white lg:text-[48px]">
+            Nov 9 - 17 | Bangkok
+        </h2>
+        <h1
+            class="relative z-10 text-nowrap text-center font-['Raleway'] text-[38px] font-extrabold leading-[100%] text-white sm:text-[38px] md:text-[80px] lg:text-[126px]">
+            Dive into Devcon
+        </h1>
+
+        <p
+            class='md:text- relative z-10 m-auto mb-4 w-[90vw] max-w-[560px] text-center text-[16px] text-white sm:mb-4 sm:text-[16px] md:text-[26px] lg:mb-12'>
+            Make waves with us at the ultimate Web3 gathering - an unforgettable experience awaits
+        </p>
+        <div
+            class='relative z-10 mx-4 flex w-full flex-col items-center justify-center gap-2 text-nowrap text-base font-semibold md:w-[224px]'>
+            <a
+                href='https://form.asana.com/?k=Qx1HYy3c8KcgfHyWszZnyA&d=1207858482725448'
+                class='relative z-10 mx-auto flex w-full items-center justify-center rounded-full bg-[#FF7056]/100 px-8 py-3.5 text-xl font-normal text-white'>
+                Sponsor an event
+            </a>
+            <a
+                href='https://calendly.com/partywithpool'
+                class="relative z-10 mt-6 text-center font-['Inter'] text-lg font-semibold leading-7 text-white">
+                Book a call
+            </a>
         </div>
     </div>
+
+    <div
+        class='float-animation-flamingo absolute right-[-380px] z-0 transform sm:top-[40%] md:right-[-250px] md:top-[40%] lg:top-[44%]'
+        style='top: min(60%, 600px);'>
+        <Image
+            class='relative h-full w-[50%] min-w-[290px] sm:w-[90%] md:w-[100%] lg:w-[100%]'
+            src={pinkFlamingo}
+            quality={100}
+            sizes='100vw'
+            loading='eager'
+            alt='Screenshot of a pink floaty flamingo'
+        />
+    </div>
 </section>
+
+<div class='relative z-0 w-full'>
+    <Image src={poolHeroBg} alt='pool background' quality={100} sizes='100vw' class='h-auto w-full object-cover' />
+</div>
+
+<style>
+    @keyframes floatStar {
+        0% {
+            transform: translateY(0) rotate(0deg);
+        }
+        50% {
+            transform: translateY(-14px) rotate(3deg);
+        }
+        100% {
+            transform: translateY(0) rotate(0deg);
+        }
+    }
+
+    @keyframes floatFlamingo {
+        0% {
+            transform: translateY(0) rotate(0deg);
+        }
+        50% {
+            transform: translateY(-23px) rotate(-5deg);
+        }
+        100% {
+            transform: translateY(0) rotate(0deg);
+        }
+    }
+
+    .float-animation-star {
+        animation: floatStar 5s ease-in-out infinite;
+        animation-delay: 0s;
+    }
+
+    .float-animation-flamingo {
+        animation: floatFlamingo 5s ease-in-out infinite;
+        animation-delay: 0.5s;
+    }
+</style>

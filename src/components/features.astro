@@ -1,58 +1,531 @@
 ---
-import cardConnect from '@/assets/images/card-connect.png'
-import cardFind from '@/assets/images/card-find.png'
-import cardSearch from '@/assets/images/card-search.png'
+import eventCardWorkshop from '@/assets/images/event-card-workshop.svg'
+import eventCardBball from '@/assets/images/event-card-bball.svg'
+import eventCardDevcon from '@/assets/images/event-card-devcon.svg'
+import sandBackground from '@/assets/images/3d-sand-background.png'
+import solanaLogo from '@/assets/images/solana-logo.svg'
+import polygonLogo from '@/assets/images/polygon-logo.svg'
+import nearLogo from '@/assets/images/near-logo.svg'
+import hederaLogo from '@/assets/images/hedera-logo.svg'
+import aleoLogo from '@/assets/images/aleo-logo.svg'
+import mobilePhones from '@/assets/images/mobile-phones1.png'
 import { Image } from 'astro:assets'
-
-const cardContent = [
-    {
-        image: cardSearch,
-        alt: 'Image for finding a pool',
-        title: 'Step 1: Find a Pool Party',
-        description: 'Browse through our curated list of events and choose the one that excites you.',
-    },
-    {
-        image: cardFind,
-        alt: 'Image for joining a pool',
-        title: 'Step 2: Join the Party',
-        description: "Click 'Join a Pool', scan the QR code, or follow the link to access the web app.",
-    },
-    {
-        image: cardConnect,
-        alt: 'Image for enjoy and connect',
-        title: 'Step 3: Enjoy and Connect',
-        description: 'Attend the event, enjoy the activities, and connect with other participants.',
-    },
-]
+import Header from './header.astro'
 ---
 
-<section class='flex w-full bg-white text-[#191C1F]'>
-    <div class='mx-4 flex w-full flex-col items-center space-y-8 rounded-2xl bg-[#f7f7f7] px-1 py-16 md:mx-0 lg:px-4'>
-        <h1 class='text-center text-2xl font-extrabold uppercase md:text-5xl'>How does pool work?</h1>
-        <p class='px-12 text-center text-sm md:text-base'>
-            Joining a Pool party is easy and fun. Follow these simple steps to get started:
-        </p>
-        <a
-            href='https://app.poolparty.cc'
-            class='w-36 rounded-full bg-gradient-to-b from-[#36a0f7] to-[#1364da] py-3 text-center text-white'>
-            Join a Pool
-        </a>
-        <ul class='mt-8 flex flex-col space-y-4 md:flex-row md:items-baseline md:space-x-4'>
-            {
-                cardContent.map(card => {
-                    return (
-                        <li class='flex h-80 w-64 flex-col overflow-hidden rounded-lg lg:w-64'>
-                            <div class='relative flex h-1/2 items-center justify-center overflow-hidden bg-gradient-to-b from-blue-500 to-sky-400'>
-                                <Image class='object-cover' src={card.image} alt={card.alt} width={192} height={192} />
-                            </div>
-                            <div class='flex h-1/2 flex-col space-y-2 bg-white p-4'>
-                                <h3 class='text-sm font-medium md:text-base lg:text-lg'>{card.title}</h3>
-                                <p class='text-sm text-[#717173]'>{card.description}</p>
-                            </div>
-                        </li>
-                    )
-                })
-            }
-        </ul>
+<section class='w-full/100 relative mt-20 flex h-[160px] flex-col items-center text-center sm:h-[220px]'>
+    <div class='mx-auto w-full max-w-[1420px] px-4'>
+        <p class='w-full px-12 text-center text-[22px]'>Partner Ecosystem</p>
+        <div class='relative mt-6 flex w-full flex-row flex-wrap justify-around gap-4 sm:gap-6'>
+            <Image
+                src={solanaLogo}
+                quality={100}
+                sizes='100vw'
+                loading='eager'
+                alt='Solana Logo'
+                class='h-[24px] w-auto sm:h-[50px]'
+            />
+            <Image
+                src={polygonLogo}
+                quality={100}
+                sizes='100vw'
+                loading='eager'
+                alt='Polygon Logo'
+                class='h-[24px] w-auto sm:h-[50px]'
+            />
+            <Image
+                src={nearLogo}
+                quality={100}
+                sizes='100vw'
+                loading='eager'
+                alt='Near Logo'
+                class='h-[24px] w-auto sm:h-[50px]'
+            />
+            <Image
+                src={hederaLogo}
+                quality={100}
+                sizes='100vw'
+                loading='eager'
+                alt='Hedera Logo'
+                class='h-[24px] w-auto sm:h-[50px]'
+            />
+            <Image
+                src={aleoLogo}
+                quality={100}
+                sizes='100vw'
+                loading='eager'
+                alt='Aleo Logo'
+                class='h-[24px] w-auto sm:h-[50px]'
+            />
+        </div>
     </div>
 </section>
+
+<!-- <section
+    id='video-container'
+    class='relative mx-auto mb-10 mt-10 flex w-full max-w-[1420px] cursor-pointer items-center justify-center text-center sm:mb-40 sm:mt-20'>
+    <div class='relative mx-auto w-full max-w-[calc(100%-24px)] overflow-hidden rounded-[24px] sm:rounded-[64px]'>
+        <div style='padding:56.25% 0 0 0;position:relative;'>
+            <iframe
+                id='vimeoPlayer'
+                src='https://player.vimeo.com/video/1007498354?badge=0&autopause=0&player_id=0&app_id=58479&controls=0'
+                frameborder='0'
+                allow='autoplay; fullscreen; picture-in-picture; clipboard-write'
+                style='position:absolute;top:0;left:0;width:100%;height:100%;'
+                title='pool_event_austin_compressed'></iframe>
+        </div>
+        <div
+            class='controls-container absolute bottom-4 left-4 right-4 flex items-center justify-between gap-4 opacity-0 transition-opacity duration-300'>
+            <div class='flex items-center gap-4'>
+                <button id='playPauseButton' class='p-2'> </button>
+                <input
+                    id='volumeSlider'
+                    type='range'
+                    min='0'
+                    max='1'
+                    step='0.01'
+                    value='1'
+                    class='volume-slider h-1 w-24 rounded-full'
+                />
+            </div>
+            <input
+                id='progressBar'
+                type='range'
+                min='0'
+                max='100'
+                value='0'
+                step='0.1'
+                class='progress-bar h-1 w-full appearance-none rounded-full bg-none'
+            />
+            <button id='expandButton' class='p-2'>
+                <svg xmlns='http://www.w3.org/2000/svg' width='39' height='39' viewBox='0 0 39 39' fill='none'>
+                    <path
+                        d='M12.5202 24.205C12.824 23.9116 13.2308 23.7492 13.6531 23.7529C14.0754 23.7566 14.4794 23.926 14.778 24.2246C15.0767 24.5233 15.2461 24.9273 15.2497 25.3496C15.2534 25.7719 15.0911 26.1788 14.7977 26.4826L10.5004 30.7785H13.0533C13.4481 30.7786 13.829 30.9237 14.1239 31.1862C14.4187 31.4487 14.6069 31.8103 14.6527 32.2024L14.664 32.3892C14.664 32.8164 14.4943 33.2261 14.1922 33.5282C13.8902 33.8303 13.4805 34 13.0533 34H6.61066C6.18349 34 5.77381 33.8303 5.47175 33.5282C5.16969 33.2261 5 32.8164 5 32.3892V25.9462C5 25.519 5.16969 25.1093 5.47175 24.8073C5.77381 24.5052 6.18349 24.3355 6.61066 24.3355C7.03784 24.3355 7.44752 24.5052 7.74957 24.8073C8.05163 25.1093 8.22133 25.519 8.22133 25.9462V28.5025L12.5202 24.205ZM25.9467 34C25.5195 34 25.1098 33.8303 24.8078 33.5282C24.5057 33.2261 24.336 32.8164 24.336 32.3892C24.336 31.962 24.5057 31.5523 24.8078 31.2503C25.1098 30.9482 25.5195 30.7785 25.9467 30.7785H28.4964L24.2039 26.4826C23.9266 26.2053 23.76 25.8362 23.7354 25.4448C23.7108 25.0533 23.8299 24.6663 24.0703 24.3564L24.2039 24.205C24.506 23.903 24.9156 23.7334 25.3427 23.7334C25.7698 23.7334 26.1794 23.903 26.4814 24.205L30.7787 28.5057V25.9462C30.7787 25.5517 30.9236 25.1709 31.1857 24.8761C31.4479 24.5813 31.8091 24.3929 32.2009 24.3468L32.3893 24.3355C32.8165 24.3355 33.2262 24.5052 33.5282 24.8073C33.8303 25.1093 34 25.519 34 25.9462V32.3892C34 32.8164 33.8303 33.2261 33.5282 33.5282C33.2262 33.8303 32.8165 34 32.3893 34H25.9467ZM13.0533 5C13.4805 5 13.8902 5.1697 14.1922 5.47178C14.4943 5.77385 14.664 6.18355 14.664 6.61075C14.664 7.03795 14.4943 7.44765 14.1922 7.74973C13.8902 8.0518 13.4805 8.22151 13.0533 8.22151H10.5036L14.7961 12.519C15.0734 12.7964 15.24 13.1654 15.2646 13.5568C15.2892 13.9483 15.1701 14.3353 14.9297 14.6452L14.7961 14.7966C14.494 15.0986 14.0844 15.2682 13.6573 15.2682C13.2302 15.2682 12.8206 15.0986 12.5186 14.7966L8.22133 10.4959V13.0538C8.22128 13.4483 8.07644 13.8291 7.81429 14.1239C7.55214 14.4187 7.19091 14.6071 6.79911 14.6532L6.61066 14.6645C6.18349 14.6645 5.77381 14.4948 5.47175 14.1927C5.16969 13.8907 5 13.481 5 13.0538V6.61075C5 6.18355 5.16969 5.77385 5.47175 5.47178C5.77381 5.1697 6.18349 5 6.61066 5H13.0533ZM32.3893 5C32.8165 5 33.2262 5.1697 33.5282 5.47178C33.8303 5.77385 34 6.18355 34 6.61075V13.0538C34 13.481 33.8303 13.8907 33.5282 14.1927C33.2262 14.4948 32.8165 14.6645 32.3893 14.6645C31.9622 14.6645 31.5525 14.4948 31.2504 14.1927C30.9484 13.8907 30.7787 13.481 30.7787 13.0538V10.4959L26.4814 14.7966C26.2041 15.0739 25.8351 15.2405 25.4436 15.2652C25.0522 15.2898 24.6652 15.1707 24.3553 14.9303L24.2039 14.7966C23.902 14.4945 23.7324 14.0849 23.7324 13.6578C23.7324 13.2307 23.902 12.8211 24.2039 12.519L28.498 8.22151H25.9467C25.5522 8.22145 25.1714 8.07661 24.8766 7.81444C24.5818 7.55228 24.3935 7.19103 24.3473 6.79921L24.336 6.61075C24.336 6.18355 24.5057 5.77385 24.8078 5.47178C25.1098 5.1697 25.5195 5 25.9467 5H32.3893Z'
+                        fill='#12C4E7'></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+</section> -->
+
+<section
+    id='video-container'
+    class='relative mx-auto mb-10 mt-10 flex w-full max-w-[1420px] cursor-pointer items-center justify-center text-center sm:mb-40 sm:mt-20'>
+    <div
+        id='iframeWrapper'
+        class='pointer-events-auto relative mx-auto w-full max-w-[calc(100%-24px)] overflow-hidden rounded-[24px] sm:rounded-[64px]'>
+        <!-- Vimeo video iframe -->
+        <div style='padding:56.25% 0 0 0;position:relative;'>
+            <iframe
+                id='vimeoPlayer'
+                src='https://player.vimeo.com/video/1007498354?badge=0&autopause=0&player_id=0&app_id=58479&controls=0'
+                frameborder='0'
+                allow='autoplay; fullscreen; picture-in-picture; clipboard-write'
+                style='position:absolute;top:0;left:0;width:100%;height:100%; pointer-events: none;'
+                title='pool_event_austin_compressed'></iframe>
+        </div>
+        <div
+            class='controls-container absolute bottom-4 left-4 right-4 flex items-center justify-between gap-4 opacity-0 transition-opacity duration-300'>
+            <div class='flex items-center gap-4'>
+                <button id='playPauseButton' class='p-2'> </button>
+                <input
+                    id='volumeSlider'
+                    type='range'
+                    min='0'
+                    max='1'
+                    step='0.01'
+                    value='1'
+                    class='volume-slider h-1 w-24 rounded-full'
+                />
+            </div>
+            <input
+                id='progressBar'
+                type='range'
+                min='0'
+                max='100'
+                value='0'
+                step='0.1'
+                class='progress-bar h-1 w-full appearance-none rounded-full bg-none'
+            />
+            <button id='expandButton' class='p-2'>
+                <svg xmlns='http://www.w3.org/2000/svg' width='39' height='39' viewBox='0 0 39 39' fill='none'>
+                    <path
+                        d='M12.5202 24.205C12.824 23.9116 13.2308 23.7492 13.6531 23.7529C14.0754 23.7566 14.4794 23.926 14.778 24.2246C15.0767 24.5233 15.2461 24.9273 15.2497 25.3496C15.2534 25.7719 15.0911 26.1788 14.7977 26.4826L10.5004 30.7785H13.0533C13.4481 30.7786 13.829 30.9237 14.1239 31.1862C14.4187 31.4487 14.6069 31.8103 14.6527 32.2024L14.664 32.3892C14.664 32.8164 14.4943 33.2261 14.1922 33.5282C13.8902 33.8303 13.4805 34 13.0533 34H6.61066C6.18349 34 5.77381 33.8303 5.47175 33.5282C5.16969 33.2261 5 32.8164 5 32.3892V25.9462C5 25.519 5.16969 25.1093 5.47175 24.8073C5.77381 24.5052 6.18349 24.3355 6.61066 24.3355C7.03784 24.3355 7.44752 24.5052 7.74957 24.8073C8.05163 25.1093 8.22133 25.519 8.22133 25.9462V28.5025L12.5202 24.205ZM25.9467 34C25.5195 34 25.1098 33.8303 24.8078 33.5282C24.5057 33.2261 24.336 32.8164 24.336 32.3892C24.336 31.962 24.5057 31.5523 24.8078 31.2503C25.1098 30.9482 25.5195 30.7785 25.9467 30.7785H28.4964L24.2039 26.4826C23.9266 26.2053 23.76 25.8362 23.7354 25.4448C23.7108 25.0533 23.8299 24.6663 24.0703 24.3564L24.2039 24.205C24.506 23.903 24.9156 23.7334 25.3427 23.7334C25.7698 23.7334 26.1794 23.903 26.4814 24.205L30.7787 28.5057V25.9462C30.7787 25.5517 30.9236 25.1709 31.1857 24.8761C31.4479 24.5813 31.8091 24.3929 32.2009 24.3468L32.3893 24.3355C32.8165 24.3355 33.2262 24.5052 33.5282 24.8073C33.8303 25.1093 34 25.519 34 25.9462V32.3892C34 32.8164 33.8303 33.2261 33.5282 33.5282C33.2262 33.8303 32.8165 34 32.3893 34H25.9467ZM13.0533 5C13.4805 5 13.8902 5.1697 14.1922 5.47178C14.4943 5.77385 14.664 6.18355 14.664 6.61075C14.664 7.03795 14.4943 7.44765 14.1922 7.74973C13.8902 8.0518 13.4805 8.22151 13.0533 8.22151H10.5036L14.7961 12.519C15.0734 12.7964 15.24 13.1654 15.2646 13.5568C15.2892 13.9483 15.1701 14.3353 14.9297 14.6452L14.7961 14.7966C14.494 15.0986 14.0844 15.2682 13.6573 15.2682C13.2302 15.2682 12.8206 15.0986 12.5186 14.7966L8.22133 10.4959V13.0538C8.22128 13.4483 8.07644 13.8291 7.81429 14.1239C7.55214 14.4187 7.19091 14.6071 6.79911 14.6532L6.61066 14.6645C6.18349 14.6645 5.77381 14.4948 5.47175 14.1927C5.16969 13.8907 5 13.481 5 13.0538V6.61075C5 6.18355 5.16969 5.77385 5.47175 5.47178C5.77381 5.1697 6.18349 5 6.61066 5H13.0533ZM32.3893 5C32.8165 5 33.2262 5.1697 33.5282 5.47178C33.8303 5.77385 34 6.18355 34 6.61075V13.0538C34 13.481 33.8303 13.8907 33.5282 14.1927C33.2262 14.4948 32.8165 14.6645 32.3893 14.6645C31.9622 14.6645 31.5525 14.4948 31.2504 14.1927C30.9484 13.8907 30.7787 13.481 30.7787 13.0538V10.4959L26.4814 14.7966C26.2041 15.0739 25.8351 15.2405 25.4436 15.2652C25.0522 15.2898 24.6652 15.1707 24.3553 14.9303L24.2039 14.7966C23.902 14.4945 23.7324 14.0849 23.7324 13.6578C23.7324 13.2307 23.902 12.8211 24.2039 12.519L28.498 8.22151H25.9467C25.5522 8.22145 25.1714 8.07661 24.8766 7.81444C24.5818 7.55228 24.3935 7.19103 24.3473 6.79921L24.336 6.61075C24.336 6.18355 24.5057 5.77385 24.8078 5.47178C25.1098 5.1697 25.5195 5 25.9467 5H32.3893Z'
+                        fill='#12C4E7'></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+<section class='w-full/100 relative flex h-full min-h-[1155px] text-[#191C1F]'>
+    <div class='mx-auto w-full max-w-[1420px] px-4'>
+        <div class='flex w-full flex-col items-center space-y-8 rounded-2xl px-1 py-16 md:mx-0 lg:px-4'>
+            <h1
+                class='text-center font-["Raleway"] text-[38px] font-extrabold leading-[100%] text-[#4078F4] sm:text-[38px] md:text-[64px] lg:text-[84px]'>
+                Upcoming pool events
+            </h1>
+
+            <p class='mb-12 px-3 text-center text-[16px] sm:px-12 md:text-[26px]'>
+                Join pool parties and events globally where we bring communities together through the power of play.
+            </p>
+            <a
+                href='https://form.asana.com/?k=Qx1HYy3c8KcgfHyWszZnyA&d=1207858482725448'
+                class='w-full rounded-full bg-[#FF7056]/100 px-8 py-3.5 text-center text-xl font-normal text-white md:w-[calc(100%-24px)] md:max-w-[224px]'>
+                Sponsor an event
+            </a>
+            <a
+                href='https://calendly.com/partywithpool'
+                class='text-center font-["Inter"] text-lg font-semibold leading-7 text-[#FF7056]'>
+                Book a call
+            </a>
+            <div class='flex w-full flex-col justify-center gap-4 custom:flex-row'>
+                <div class='relative z-10 mt-4 min-w-[282px] flex-grow'>
+                    <Image
+                        class='h-auto w-full'
+                        src={eventCardWorkshop}
+                        width={407}
+                        height={407}
+                        quality={100}
+                        sizes='100vw'
+                        loading='eager'
+                        alt='Photo of an event card'
+                    />
+                    <a
+                        href='https://lu.ma/nmlf86l7'
+                        class='absolute bottom-[4%] right-[4%] w-36 rounded-full bg-white py-3 text-center text-[#4078F4]'>
+                        Register
+                    </a>
+                </div>
+                <div class='relative z-10 mt-4 min-w-[282px] flex-grow'>
+                    <Image
+                        class='h-auto w-full'
+                        src={eventCardBball}
+                        width={407}
+                        height={407}
+                        quality={100}
+                        sizes='100vw'
+                        loading='eager'
+                        alt='Photo of an event card'
+                    />
+                    <a
+                        href='https://lu.ma/zzn9lwxi?tk=QE5hRt'
+                        class='absolute bottom-[4%] right-[4%] w-36 rounded-full bg-white py-3 text-center text-[#FF7056]'>
+                        Register
+                    </a>
+                </div>
+                <div class='relative z-10 mt-4 min-w-[282px] flex-grow'>
+                    <Image
+                        class='h-auto w-full'
+                        src={eventCardDevcon}
+                        width={407}
+                        height={407}
+                        quality={100}
+                        sizes='100vw'
+                        loading='eager'
+                        alt='Photo of an event card'
+                    />
+                    <a
+                        href='https://form.asana.com/?k=Qx1HYy3c8KcgfHyWszZnyA&d=1207858482725448'
+                        class='absolute bottom-[4%] right-[4%] w-36 rounded-full bg-white py-3 text-center text-[#12C4E7]'>
+                        Sponsor Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='absolute -bottom-[0px] left-0 right-0 -z-10 w-full'>
+        <Image
+            src={sandBackground}
+            quality={100}
+            sizes='100vw'
+            loading='eager'
+            alt='Sand background'
+            class='h-auto w-full'
+        />
+    </div>
+</section>
+
+<section>
+    <div class='mx-auto w-full max-w-[1420px] px-4'>
+        <div class='mx-0 flex w-full flex-col items-start space-y-8 rounded-2xl px-1 py-16 md:mx-0 lg:mx-4 lg:px-4'>
+            <h1
+                class='w-full text-center font-["Raleway"] text-[38px] font-extrabold leading-[100%] text-[#4078F4] sm:text-[38px] md:text-left md:text-[64px] lg:text-[84px]'>
+                Pooling <br /> made easy
+            </h1>
+            <p
+                class='font-[ md:text-[26px]Inter w-full text-center text-[16px] font-normal text-black sm:text-[20px] md:w-[599px] md:text-left md:text-[26px] md:leading-[33px]'>
+                Pool brings ease, transparency, and peace of mind to group fund management. Perfect for events,
+                tournaments, or any shared budget.
+            </p>
+
+            <a
+                href='https://form.asana.com/?k=Qx1HYy3c8KcgfHyWszZnyA&d=1207858482725448'
+                class='w-full rounded-full bg-[#FF7056]/100 px-8 py-3.5 text-center text-xl font-normal text-white md:mx-0 md:w-[calc(100%-24px)] md:max-w-[224px] md:text-left'>
+                Sponsor an event
+            </a>
+
+            <div class='flex w-full justify-end'>
+                <Image
+                    class='h-auto w-auto max-w-full'
+                    src={mobilePhones}
+                    quality={100}
+                    sizes='100vw'
+                    loading='eager'
+                    alt='Photo of mobile phones showing the Pool application'
+                />
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    #poolVideo::-webkit-media-controls {
+        display: none !important;
+    }
+
+    #poolVideo:hover::-webkit-media-controls {
+        display: block !important;
+    }
+
+    .relative:hover .controls-container {
+        opacity: 1;
+    }
+
+    .volume-slider {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 8px;
+        background: #12c4e7;
+        border-radius: 5px;
+        outline: none;
+        transition: background 0.3s ease-in-out;
+    }
+
+    .volume-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 14px;
+        height: 14px;
+        background: #12c4e7;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .volume-slider::-moz-range-thumb {
+        width: 12px;
+        height: 12px;
+        background: #e0e0e01f;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .progress-bar {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 20px;
+        background: rgba(224, 224, 224, 0.1); /* 10% opacity */
+        border-radius: 0;
+        outline: none;
+        transition: background 0.3s ease-in-out;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .progress-bar::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 0; /* Hide the thumb */
+        height: 0;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .progress-bar::-moz-range-thumb {
+        width: 0; /* Hide the thumb */
+        height: 0;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .progress-bar::-webkit-slider-runnable-track {
+        background: rgba(224, 224, 224, 0.1); /* 10% opacity */
+        border-radius: 0;
+        cursor: pointer;
+    }
+
+    .progress-bar::-moz-range-track {
+        background: rgba(224, 224, 224, 0.1); /* 10% opacity */
+        border-radius: 0;
+        cursor: pointer;
+    }
+</style>
+
+<script src='https://player.vimeo.com/api/player.js'></script>
+
+<script>
+    declare const Vimeo: any // Declare Vimeo for TypeScript
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Initialize Vimeo Player
+        const iframe = document.getElementById('vimeoPlayer') as HTMLIFrameElement
+        const player = new Vimeo.Player(iframe)
+
+        const videoContainer = document.getElementById('video-container') as HTMLElement // The entire clickable area
+        const iframeWrapper = document.getElementById('iframeWrapper') as HTMLElement // The wrapper around the iframe
+        const playPauseButton = document.getElementById('playPauseButton') as HTMLButtonElement
+        const volumeSlider = document.getElementById('volumeSlider') as HTMLInputElement
+        const expandButton = document.getElementById('expandButton') as HTMLButtonElement
+        const progressBar = document.getElementById('progressBar') as HTMLInputElement
+        const controls = document.querySelector('.controls-container') as HTMLElement
+
+        if (!player || !playPauseButton || !volumeSlider || !expandButton || !controls) return
+
+        // Enable pointer events on iframeWrapper
+        iframeWrapper.style.pointerEvents = 'auto'
+
+        // Play/Pause and Update Icon
+        function updatePlayPauseIcon(isPlaying: boolean) {
+            playPauseButton.innerHTML = isPlaying
+                ? `<svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17 8C17 6.34315 15.6569 5 14 5C12.3431 5 11 6.34315 11 8V31C11 32.6569 12.3431 34 14 34C15.6569 34 17 32.6569 17 31V8ZM29 8C29 6.34315 27.6569 5 26 5C24.3431 5 23 6.34315 23 8V31C23 32.6569 24.3431 34 26 34C27.6569 34 29 32.6569 29 31V8Z" fill="#12C4E7"/>
+                </svg>`
+                : `<svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39" fill="none">
+                    <path d="M31.8519 16.2989C34.7161 17.9439 34.716 22.0561 31.8519 23.7011L11.4444 35.4211C8.58024 37.066 5 35.0098 5 31.72L5 8.27998C5 4.99015 8.58025 2.93402 11.4444 4.57893L31.8519 16.2989Z" fill="#12C4E7"/>
+                </svg>`
+        }
+
+        // Click event to toggle play/pause when clicking anywhere on the video container, except the controls
+        videoContainer.addEventListener('click', function (event) {
+            if (!(event.target as HTMLElement).closest('.controls-container')) {
+                player.getPaused().then((paused: boolean) => {
+                    if (paused) {
+                        player.play()
+                    } else {
+                        player.pause()
+                    }
+                })
+            }
+        })
+
+        // Click event for play/pause button
+        playPauseButton.addEventListener('click', function (event) {
+            event.stopPropagation() // Prevent event from bubbling up to the container
+            player.getPaused().then((paused: boolean) => {
+                if (paused) {
+                    player.play()
+                } else {
+                    player.pause()
+                }
+            })
+        })
+
+        player.on('play', function () {
+            updatePlayPauseIcon(true)
+        })
+
+        player.on('pause', function () {
+            updatePlayPauseIcon(false)
+        })
+
+        // Volume Control
+        volumeSlider.addEventListener('input', function (event: Event) {
+            const target = event.target as HTMLInputElement
+            const value = parseFloat(target.value)
+            player.setVolume(value)
+            volumeSlider.style.background = `linear-gradient(to right, #12c4e7 ${value * 100}%, #e0e0e0 ${value * 100}%)`
+        })
+
+        // Fullscreen Control
+        expandButton.addEventListener('click', function (event) {
+            event.stopPropagation() // Prevent event from bubbling up to the container
+            player.getFullscreen().then((fullscreen: boolean) => {
+                if (fullscreen) {
+                    player.exitFullscreen()
+                } else {
+                    player.requestFullscreen()
+                }
+            })
+        })
+
+        // Update Expand Icon
+        function updateExpandIcon(isFullscreen: boolean) {
+            expandButton.innerHTML = isFullscreen
+                ? `<svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39" fill="none">
+                    <!-- Minimize Icon SVG -->
+                    <path d="M14.625 6.5C14.625 6.06902 14.4538 5.6557 14.149 5.35095C13.8443 5.0462 13.431 4.875 13 4.875C12.569 4.875 12.1557 5.0462 11.851 5.35095C11.5462 5.6557 11.375 6.06902 11.375 6.5V10.5625C11.375 10.778 11.2894 10.9847 11.137 11.137C10.9847 11.2894 10.778 11.375 10.5625 11.375H6.5C6.06902 11.375 5.6557 11.5462 5.35095 11.851C5.0462 12.1557 4.875 12.569 4.875 13C4.875 13.431 5.0462 13.8443 5.35095 14.149C5.6557 14.4538 6.06902 14.625 6.5 14.625H10.5625C11.6399 14.625 12.6733 14.197 13.4351 13.4351C14.197 12.6733 14.625 11.6399 14.625 10.5625V6.5ZM14.625 32.5C14.625 32.931 14.4538 33.3443 14.149 33.649C13.8443 33.9538 13.431 34.125 13 34.125C12.569 34.125 12.1557 33.9538 11.851 33.649C11.5462 33.3443 11.375 32.931 11.375 32.5V28.4375C11.375 28.222 11.2894 28.0153 11.137 27.863C10.9847 27.7106 10.778 27.625 10.5625 27.625H6.5C6.06902 27.625 5.6557 27.4538 5.35095 27.149C5.0462 26.8443 4.875 26.431 4.875 26C4.875 25.569 5.0462 25.1557 5.35095 24.851C5.6557 24.5462 6.06902 24.375 6.5 24.375H10.5625C11.6399 24.375 12.6733 24.803 13.4351 25.5649C14.197 26.3267 14.625 27.3601 14.625 28.4375V32.5ZM26 4.875C25.569 4.875 25.1557 5.0462 24.851 5.35095C24.5462 5.6557 24.375 6.06902 24.375 6.5V10.5625C24.375 11.6399 24.803 12.6733 25.5649 13.4351C26.3267 14.197 27.3601 14.625 28.4375 14.625H32.5C32.931 14.625 33.3443 14.4538 33.649 14.149C33.9538 13.8443 34.125 13.431 34.125 13C34.125 12.569 33.9538 12.1557 33.649 11.851C33.3443 11.5462 32.931 11.375 32.5 11.375H28.4375C28.222 11.375 28.0153 11.2894 27.863 11.137C27.7106 10.9847 27.625 10.778 27.625 10.5625V6.5C27.625 6.06902 27.4538 5.6557 27.149 5.35095C26.8443 5.0462 26.431 4.875 26 4.875ZM24.375 32.5C24.375 32.931 24.5462 33.3443 24.851 33.649C25.1557 33.9538 25.569 34.125 26 34.125C26.431 34.125 26.8443 33.9538 27.149 33.649C27.4538 33.3443 27.625 32.931 27.625 32.5V28.4375C27.625 28.222 27.7106 28.0153 27.863 27.863C28.0153 27.7106 28.222 27.625 28.4375 27.625H32.5C32.931 27.625 33.3443 27.4538 33.649 27.149C33.9538 26.8443 34.125 26.431 34.125 26C34.125 25.569 33.9538 25.1557 33.649 24.851C33.3443 24.5462 32.931 24.375 32.5 24.375H28.4375C27.3601 24.375 26.3267 24.803 25.5649 25.5649C24.803 26.3267 24.375 27.3601 24.375 28.4375V32.5Z" fill="#12C4E7"/>
+                </svg>`
+                : `<svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39" fill="none">
+                    <!-- Expand Icon SVG -->
+                    <path d="M12.5202 24.205C12.824 23.9116 13.2308 23.7492 13.6531 23.7529C14.0754 23.7566 14.4794 23.926 14.778 24.2246C15.0767 24.5233 15.2461 24.9273 15.2497 25.3496C15.2534 25.7719 15.0911 26.1788 14.7977 26.4826L10.5004 30.7785H13.0533C13.4481 30.7786 13.829 30.9237 14.1239 31.1862C14.4187 31.4487 14.6069 31.8103 14.6527 32.2024L14.664 32.3892C14.664 32.8164 14.4943 33.2261 14.1922 33.5282C13.8902 33.8303 13.4805 34 13.0533 34H6.61066C6.18349 34 5.77381 33.8303 5.47175 33.5282C5.16969 33.2261 5 32.8164 5 32.3892V25.9462C5 25.519 5.16969 25.1093 5.47175 24.8073C5.77381 24.5052 6.18349 24.3355 6.61066 24.3355C7.03784 24.3355 7.44752 24.5052 7.74957 24.8073C8.05163 25.1093 8.22133 25.519 8.22133 25.9462V28.5025L12.5202 24.205ZM25.9467 34C25.5195 34 25.1098 33.8303 24.8078 33.5282C24.5057 33.2261 24.336 32.8164 24.336 32.3892C24.336 31.962 24.5057 31.5523 24.8078 31.2503C25.1098 30.9482 25.5195 30.7785 25.9467 30.7785H28.4964L24.2039 26.4826C23.9266 26.2053 23.76 25.8362 23.7354 25.4448C23.7108 25.0533 23.8299 24.6663 24.0703 24.3564L24.2039 24.205C24.506 23.903 24.9156 23.7334 25.3427 23.7334C25.7698 23.7334 26.1794 23.903 26.4814 24.205L30.7787 28.5057V25.9462C30.7787 25.5517 30.9236 25.1709 31.1857 24.8761C31.4479 24.5813 31.8091 24.3929 32.2009 24.3468L32.3893 24.3355C32.8165 24.3355 33.2262 24.5052 33.5282 24.8073C33.8303 25.1093 34 25.519 34 25.9462V32.3892C34 32.8164 33.8303 33.2261 33.5282 33.5282C33.2262 33.8303 32.8165 34 32.3893 34H25.9467Z" fill="#12C4E7"/>
+                </svg>`
+        }
+
+        // Progress Bar Update
+        function updateProgressBar(currentTime: number, duration: number) {
+            const percent = (currentTime / duration) * 100
+            progressBar.value = percent.toString()
+            progressBar.style.background = `linear-gradient(to right, #12c4e7 ${percent}%, rgba(224, 224, 224, 0.1) ${percent}%)`
+        }
+
+        // Update progress bar while playing
+        player.on('timeupdate', function (data: { seconds: number; duration: number }) {
+            updateProgressBar(data.seconds, data.duration)
+        })
+
+        // Seek video on progress bar change
+        progressBar.addEventListener('input', function () {
+            player.getDuration().then((duration: number) => {
+                const seekTime = (parseFloat(progressBar.value) / 100) * duration
+                player.setCurrentTime(seekTime)
+            })
+        })
+
+        // Intersection Observer for Autoplay and Pause
+        const observer = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    if (entry.intersectionRatio >= 0.1) {
+                        player.play().catch((error: any) => {
+                            console.log('Autoplay was prevented:', error)
+                        })
+                    } else if (entry.intersectionRatio < 0.2) {
+                        player.pause()
+                    }
+                })
+            },
+            { threshold: [0.1, 0.3] },
+        )
+
+        observer.observe(iframe)
+
+        // Show/Hide Controls
+        function showControls() {
+            controls.classList.remove('opacity-0')
+        }
+
+        function hideControls() {
+            controls.classList.add('opacity-0')
+        }
+
+        videoContainer.addEventListener('mousemove', showControls)
+        controls.addEventListener('mousemove', showControls)
+
+        let controlsTimeout: number
+        function resetControlsTimeout() {
+            clearTimeout(controlsTimeout)
+            controlsTimeout = window.setTimeout(hideControls, 500)
+        }
+
+        videoContainer.addEventListener('mousemove', resetControlsTimeout)
+        controls.addEventListener('mousemove', resetControlsTimeout)
+
+        // Fullscreen Event Listener
+        document.addEventListener('fullscreenchange', () => {
+            updateExpandIcon(!!document.fullscreenElement)
+            if (document.fullscreenElement) {
+                showControls()
+            }
+        })
+    })
+</script>

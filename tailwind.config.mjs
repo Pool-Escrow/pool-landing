@@ -70,7 +70,8 @@ export default {
             },
             fontFamily: {
                 body: ['Inter', 'Inter-fallback', ...defaultTheme.fontFamily.sans],
-                logo: ['Comfortaa', 'Comfortaa-fallback', ...defaultTheme.fontFamily.sans],
+                body: ['Raleway', 'Raleway Variable', ...defaultTheme.fontFamily.sans],
+                logo: ['Raleway', 'Raleway Variable', ...defaultTheme.fontFamily.sans],
             },
             height: {
                 'top-bar': 'var(--top-bar-height)',
@@ -103,6 +104,10 @@ export default {
             },
             textShadow: {
                 inner: '0 3px 4px #fff, 0 0 0 #151515, 0px 3px 4px #fff',
+            },
+            screens: {
+                'custom': '930px',
+                'flamingo': '1328px'
             },
             width: {
                 100: '25rem',

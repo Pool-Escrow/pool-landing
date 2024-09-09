@@ -1,26 +1,12 @@
-<header class='sticky top-0 w-full transition-colors duration-300' id='main-header'>
+<header class='absolute top-0 z-50 w-full transition-colors duration-300' id='main-header'>
     <nav class='container flex items-center justify-between py-5 align-middle lg:py-16'>
-        <a href='/' class='font-logo text-5xl font-bold text-white'> pool </a>
-        <a href='https://app.poolparty.cc' class='rounded-full bg-zinc-100 px-8 py-3.5 text-xl font-medium text-black'>
-            Get started
+        <!-- Logo: Larger by default, smaller on screens smaller than medium -->
+        <a href='/' class='font-logo text-3xl font-bold text-white md:text-5xl'>pool</a>
+        <!-- Button: Show by default, hidden on screens smaller than medium -->
+        <a
+            href='https://app.poolparty.cc'
+            class='hidden rounded-full bg-[#FF7056]/100 px-8 py-3.5 text-xl font-normal text-white md:inline-block'>
+            Sponsor an event
         </a>
     </nav>
 </header>
-
-<script>
-    const header = document.getElementById('main-header')
-
-    function updateHeaderBackground() {
-        if (window.scrollY > 0) {
-            header?.classList.add('bg-black', 'bg-opacity-20')
-        } else {
-            header?.classList.remove('bg-black', 'bg-opacity-20')
-        }
-    }
-
-    // Refresh on load
-    updateHeaderBackground()
-
-    // Update on scroll
-    window.addEventListener('scroll', updateHeaderBackground)
-</script>
