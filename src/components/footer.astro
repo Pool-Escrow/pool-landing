@@ -1,6 +1,7 @@
 ---
 import footerBackground from '@/assets/images/footer-background-image.png'
 import footerImage from '@/assets/images/3d-footer-image-desktop.png'
+import mobileFooterImage from '@/assets/images/3d-footer-background-items-image.png'
 import { Image } from 'astro:assets'
 ---
 
@@ -17,7 +18,7 @@ import { Image } from 'astro:assets'
 
 <section
     class='relative z-20 flex min-h-[80vh] w-full flex-col items-center justify-center bg-[#12C4E7] sm:min-h-[60vh]'>
-    <footer class='relative flex w-full flex-col items-center justify-center pb-[120px] text-center'>
+    <footer class='relative z-30 flex w-full flex-col items-center justify-center pb-[120px] text-center'>
         <div class='flex flex-col items-center justify-center'>
             <h1
                 class='font-raleway relative z-20 mb-4 text-center text-[38px] font-extrabold leading-[100%] text-white sm:text-[38px] md:text-[80px] lg:text-[126px]'>
@@ -30,21 +31,32 @@ import { Image } from 'astro:assets'
             </p>
         </div>
         <a
-            href='https://app.poolparty.cc'
-            class='mb-6 mt-12 w-full max-w-[calc(100%-24px)] rounded-full bg-[#FF7056]/100 px-8 py-3.5 text-xl font-normal text-white sm:w-auto'>
+            href='https://form.asana.com/?k=Qx1HYy3c8KcgfHyWszZnyA&d=1207858482725448'
+            class='relative z-30 mb-6 mt-12 w-full max-w-[224px] rounded-full bg-[#FF7056]/100 px-8 py-3.5 text-xl font-normal text-white sm:w-auto'>
             Sponsor an event
         </a>
-        <a href='https://calendly.com/partywithpool' class='mb-40 w-36 py-3 text-center text-white'> Book a call </a>
+        <a href='https://calendly.com/partywithpool' class='relative z-30 mb-40 w-36 py-3 text-center text-white'>
+            Book a call
+        </a>
     </footer>
 
     <div class='pointer-events-none absolute bottom-0 left-0 w-full'>
+        <Image
+            src={mobileFooterImage}
+            quality={100}
+            sizes='100vw'
+            loading='eager'
+            alt='A photo of a beach setting with palm trees, sand and an umbrella'
+            class='block h-auto w-full sm:hidden'
+        />
+
         <Image
             src={footerImage}
             quality={100}
             sizes='100vw'
             loading='eager'
             alt='A photo of a beach setting with palm trees, sand and an umbrella'
-            class='h-auto w-full'
+            class='hidden h-auto w-full sm:block'
         />
     </div>
 </section>
