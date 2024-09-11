@@ -11,6 +11,11 @@ const { title } = Astro.props
         <meta charset='utf-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Pool Party - {title}</title>
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+        </style>
     </head>
     <body class='flex min-h-dvh flex-col overflow-x-hidden bg-[#FFF5E9]/100 motion-safe:scroll-smooth'>
         <slot />
