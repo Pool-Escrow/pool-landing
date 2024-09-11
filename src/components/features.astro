@@ -16,7 +16,7 @@ import { Image } from 'astro:assets'
 <!-- Partners Logos -->
 <section class='w-full/100 relative mt-20 flex h-[160px] flex-col items-center text-center sm:h-[220px]'>
     <div class='mx-auto w-full max-w-[1420px] px-4'>
-        <p class='w-full px-12 text-center text-[22px]'>Partner Ecosystem</p>
+        <p class='w-full px-12 text-center text-[16px] sm:text-[22px]'>Partner Ecosystem</p>
         <div class='relative mt-6 flex w-full flex-row flex-wrap justify-around gap-4 sm:gap-6'>
             <Image
                 src={solanaLogo}
@@ -68,7 +68,7 @@ import { Image } from 'astro:assets'
     class='relative mx-auto mb-10 mt-10 flex w-full max-w-[1420px] cursor-pointer items-center justify-center text-center sm:mb-40 sm:mt-20'>
     <div
         id='iframeWrapper'
-        class='pointer-events-auto relative mx-auto w-full max-w-[calc(100%-24px)] overflow-hidden rounded-[24px] sm:rounded-[64px]'>
+        class='pointer-events-auto relative mx-auto w-full max-w-[calc(100%-40px)] overflow-hidden rounded-[24px] sm:rounded-[64px]'>
         <div style='padding:56.25% 0 0 0;position:relative;'>
             <iframe
                 id='vimeoPlayer'
@@ -201,9 +201,7 @@ import { Image } from 'astro:assets'
     </div>
 </section>
 
-<!-- App Preview -->
 <section id='download-app'>
-    <!-- Adjust padding for mobile using Tailwind classes -->
     <div class='mx-auto w-full max-w-[1420px] px-0 sm:px-4'>
         <div class='mx-0 flex w-full flex-col items-start space-y-8 rounded-2xl py-16 sm:px-0 md:mx-0 lg:mx-4 lg:px-4'>
             <h1
@@ -211,19 +209,18 @@ import { Image } from 'astro:assets'
                 Pooling <br /> made easy
             </h1>
             <p
-                class='font-[ md:text-[26px]Inter w-full px-3 text-center text-[16px] font-normal text-black sm:px-0 sm:text-[20px] md:w-[599px] md:text-left md:text-[26px] md:leading-[33px]'>
+                class='font-[ md:text-[26px]Inter w-full px-5 text-center text-[16px] font-normal text-black sm:px-0 sm:text-[20px] md:w-[599px] md:text-left md:text-[26px] md:leading-[33px]'>
                 Pool brings ease, transparency, and peace of mind to group fund management. Perfect for events,
                 tournaments, or any shared budget.
             </p>
 
             <a
                 href='https://app.poolparty.cc'
-                class='mx-3 w-[calc(100%-24px)] rounded-full bg-[#FF7056]/100 py-3.5 text-center text-[16px] font-normal text-white sm:mx-0 sm:w-full sm:text-xl md:mx-0 md:max-w-[224px] md:text-center'>
+                class='mx-auto w-[calc(100%-40px)] rounded-full bg-[#FF7056]/100 py-3.5 text-center text-[16px] font-normal text-white sm:mx-0 sm:w-full sm:text-xl md:mx-0 md:max-w-[224px] md:text-center'>
                 Launch app
             </a>
 
             <div class='flex w-full justify-end sm:justify-center'>
-                <!-- Mobile-specific image, visible only on screens smaller than 680px -->
                 <Image
                     class='block w-full sm:hidden'
                     src={mobileMobilePhones}
@@ -233,7 +230,6 @@ import { Image } from 'astro:assets'
                     alt='Photo of mobile phones showing the Pool application'
                 />
 
-                <!-- Default image, hidden on screens smaller than 680px -->
                 <Image
                     class='hidden h-auto w-auto max-w-full sm:block'
                     src={mobilePhones}
