@@ -1,16 +1,99 @@
 <header class='absolute top-0 z-50 w-full transition-colors duration-300' id='main-header'>
     <nav class='container flex items-center justify-between py-5 align-middle lg:py-16'>
+        <!-- Logo -->
         <div class='relative items-center justify-center align-middle'>
-            <a href='#main-header' id='' class='font-raleway px-6 text-3xl font-bold text-white md:text-5xl'>pool</a>
+            <a href='#main-header' class='font-raleway px-6 text-3xl font-bold text-white md:text-5xl'>pool</a>
         </div>
-        <div>
-            <!-- <a href='#upcoming-events' id='' class='px-6 text-xl text-white'>Upcoming events</a>
-            <a href='#download-app' id='' class='px-6 text-xl text-white'>About</a> -->
+
+        <!-- Full Menu for Larger Screens -->
+        <div class='hidden items-center space-x-6 lg:flex'>
+            <a href='#upcoming-events' class='text-xl text-white'>Upcoming events</a>
+            <a href='#download-app' class='text-xl text-white'>About</a>
             <a
                 href='https://app.poolparty.cc'
-                class='rounded-full bg-[#FF7056]/100 px-8 py-3.5 text-xl font-normal text-white md:inline-block'>
+                class='rounded-full bg-white px-8 py-3.5 text-xl font-normal text-[#FF7056]/100'>
+                Launch app
+            </a>
+        </div>
+
+        <!-- Hamburger Button for Mobile -->
+        <button id='menu-toggle' class='block focus:outline-none lg:hidden'>
+            <!-- Icon for Hamburger Menu -->
+            <svg
+                id='hamburger-icon'
+                class='h-8 w-8 text-white'
+                xmlns='http://www.w3.org/2000/svg'
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke='currentColor'>
+                <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 12h16m-7 6h7'></path>
+            </svg>
+        </button>
+
+        <!-- Full-Screen Menu Items for Mobile -->
+        <div
+            id='menu-items'
+            class='fixed left-0 top-0 hidden h-full w-full flex-col items-center justify-center space-y-9 bg-[#12C4E7] p-4 transition-all duration-300 lg:hidden'>
+            <!-- Icon for Close Menu (X) -->
+            <button id='close-menu' class='absolute right-4 top-4 focus:outline-none'>
+                <svg
+                    id='close-icon'
+                    class='h-8 w-8 text-white'
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke='currentColor'>
+                    <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12'
+                    ></path>
+                </svg>
+            </button>
+            <a href='#upcoming-events' class='block px-6 pt-4 text-xl text-white'>Upcoming events</a>
+            <a href='#download-app' class='block px-6 text-xl text-white'>About</a>
+            <a
+                href='https://app.poolparty.cc'
+                class='block rounded-full bg-white px-8 py-3.5 text-center text-xl font-normal text-[#FF7056]'>
                 Launch app
             </a>
         </div>
     </nav>
 </header>
+
+<script>
+    // JavaScript for toggling the menu
+    document.getElementById('menu-toggle')?.addEventListener('click', function () {
+        const menuItems = document.getElementById('menu-items')
+        const hamburgerIcon = document.getElementById('hamburger-icon')
+
+        // Check if elements exist before proceeding
+        if (menuItems && hamburgerIcon) {
+            menuItems.classList.toggle('hidden') // Toggle visibility of menu
+            hamburgerIcon.classList.toggle('hidden') // Toggle hamburger icon visibility
+        }
+    })
+
+    // JavaScript for closing the menu
+    document.getElementById('close-menu')?.addEventListener('click', function () {
+        const menuItems = document.getElementById('menu-items')
+        const hamburgerIcon = document.getElementById('hamburger-icon')
+
+        // Check if elements exist before proceeding
+        if (menuItems && hamburgerIcon) {
+            menuItems.classList.add('hidden') // Hide menu
+            hamburgerIcon.classList.remove('hidden') // Show hamburger icon
+        }
+    })
+
+    // Add event listeners to menu links to close the menu on click
+    document.querySelectorAll('#menu-items a')?.forEach(link => {
+        link.addEventListener('click', function () {
+            const menuItems = document.getElementById('menu-items')
+            const hamburgerIcon = document.getElementById('hamburger-icon')
+
+            // Check if elements exist before proceeding
+            if (menuItems && hamburgerIcon) {
+                menuItems.classList.add('hidden') // Hide menu
+                hamburgerIcon.classList.remove('hidden') // Show hamburger icon
+            }
+        })
+    })
+</script>
