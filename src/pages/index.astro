@@ -22,7 +22,7 @@ import '@fontsource-variable/raleway'
 
                 <div class='col side-2'>
                     <div class='img'><img src='/img4.png' alt='' /></div>
-                    <div class='img'><img src='/img7.png' alt='' /></div>
+                    <div class='img'><img src='/img1.png' alt='' /></div>
                     <div class='img'><img src='/img6.png' alt='' /></div>
                 </div>
 
@@ -93,622 +93,1176 @@ import '@fontsource-variable/raleway'
             </div>
 
             <section class='intro'>
-                <div class='tagline'>
-                    <p>Inspired visuals for creators of calm and beauty</p>
-                </div>
-                <div class='divider'></div>
-                <div class='intro-header'>
-                    <h1>No gas fees</h1>
-                    <h1>No set up fees</h1>
+                <div class='intro-background'>
+                    <div class='intro-header'>
+                        <h1 class='intro-title'>
+                            <span class='blue-text'>Pool, fund, and split</span>
+                            <span class='black-text'>smarter for any event</span>
+                        </h1>
+                    </div>
+
+                    <div class='intro-content'>
+                        <div class='intro-content-item'>
+                            <img src='/sponsors.png' alt='sponsors' />
+                        </div>
+                    </div>
+
+                    <button class='intro-button'>Launch App</button>
                 </div>
             </section>
-
-            <section class='ws'></section>
-
-            <section class='outro'>
-                <h1>All in the new</h1>
-                <h1>pool app</h1>
-            </section>
-
-            <section class='footer'></section>
         </main>
 
-        <!-- Add a very subtle visual hint to help users know to scroll -->
-        <div class='scroll-hint'>
-            <span>Scroll to explore</span>
-            <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                <path
-                    d='M12 5V19M12 19L6 13M12 19L18 13'
-                    stroke='currentColor'
-                    stroke-width='2'
-                    stroke-linecap='round'
-                    stroke-linejoin='round'></path>
-            </svg>
-        </div>
+        <section class='ws'></section>
 
-        <!-- Load libraries from CDN -->
-        <script is:inline src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js'></script>
-        <script is:inline src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js'></script>
-        <script is:inline src='https://unpkg.com/lenis@1.1.18/dist/lenis.min.js'></script>
+        <section class='all-in-section'>
+            <div class='all-in-wrapper'>
+                <div class='all-in-background'>
+                    <img src='/all-in-background-four.png' alt='Pool app background' />
+                </div>
+                <div class='all-in-content'>
+                    <h1>All in</h1>
+                    <h1>the new</h1>
+                    <h1>pool app</h1>
+                </div>
+                <div class='video-container'>
+                    <video class='animation-video' autoplay loop muted playsinline preload='auto' '>
+                        <source src='/pool-animation6.mp4' type='video/mp4' />
+                    </video>
+                </div>
+            </div>
+        </section>
 
-        <script>
-            // Add type declarations for external libraries
-            declare const gsap: any
-            declare const ScrollTrigger: any
-            declare const Lenis: any
+        <section class='footer'>
+            <div class='footer-content'>
+                <div class='footer-logo-container'>
+                    <div class='footer-logo'>pool</div>
+                    <div class='footer-social'>
+                        <a href='#'><img src='/x-icon.svg' alt='X Icon' /></a>
+                        <a href='#'><img src='/telegram-icon.svg' alt='Telegram Icon' /></a>
+                    </div>
+                    <div class='email-input-container'>
+                        <input type='email' class='email-input' placeholder='Enter your email' />
+                        <button class='join-waitlist-btn'>Join our waitlist</button>
+                    </div>
+                </div>
 
-            // Register ScrollTrigger plugin
-            gsap.registerPlugin(ScrollTrigger)
+                <div class='footer-links'>
+                    <div class='footer-column'>
+                        <h3>Play</h3>
+                        <ul>
+                            <li><a href='#'>Party with Pool</a></li>
+                            <li><a href='#'>Documentation</a></li>
+                            <li><a href='#'>Application</a></li>
+                        </ul>
+                    </div>
 
-            // Initial entrance animation - slide in from bottom
-            const phoneContainer = document.querySelector('.phone-img-container') as HTMLElement | null
-            const coins = document.querySelectorAll('.coin-floating') as NodeListOf<HTMLElement>
-            const logo = document.querySelector('.logo') as HTMLElement | null
-            const subheader = document.querySelector('.subheader') as HTMLElement | null
-            const ctaButton = document.querySelector('.cta-button') as HTMLElement | null
+                    <div class='footer-column'>
+                        <h3>Community</h3>
+                        <ul>
+                            <li><a href='#'>Lu.ma</a></li>
+                            <li><a href='#'>Support</a></li>
+                            <li><a href='#'>FAQs</a></li>
+                        </ul>
+                    </div>
 
-            // Set initial position (off-screen or invisible)
-            gsap.set([phoneContainer, ...coins], {
-                y: '100vh',
-                opacity: 0,
-            })
+                    <div class='footer-column'>
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href='#'>Pool Hub</a></li>
+                            <li><a href='#'>Terms of Service</a></li>
+                            <li><a href='#'>Privacy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-            gsap.set([logo, subheader, ctaButton], {
-                y: 50,
-                opacity: 0,
-            })
+            <div class='border'></div>
 
-            // Create a timeline for the entrance animation
-            const entranceTl = gsap.timeline({
-                onComplete: () => {
-                    // Start floating animations after entrance completes
-                    startFloatingAnimations()
+            <div class='footer-disclaimer'>
+                <p class='footer-disclaimer'>
+                    Pool is a platform that allows users to create and manage pooled funds for events, payouts, and
+                    community initiatives. By using Pool, you acknowledge that you are solely responsible for complying
+                    with applicable laws, regulations, and tax obligations. Pool does not provide financial or legal
+                    advice, and is not liable for the creation, management, or distribution of funds on the platform.
+                    Users must conduct proper due diligence when handling payments, KYC/KYB, or participant rewards. Use
+                    of the platform is at your own risk and may be subject to local restrictions.
+                </p>
+                <p class='copyright'>© 2025 Pool. All rights reserved.</p>
+            </div>
+        </section>
+    </body>
+
+    <!-- Add a very subtle visual hint to help users know to scroll -->
+    <div class='scroll-hint'>
+        <span>Scroll to explore</span>
+        <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+            <path
+                d='M12 5V19M12 19L6 13M12 19L18 13'
+                stroke='currentColor'
+                stroke-width='2'
+                stroke-linecap='round'
+                stroke-linejoin='round'></path>
+        </svg>
+    </div>
+
+    <!-- Load libraries from CDN -->
+    <script is:inline src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js'></script>
+    <script is:inline src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js'></script>
+    <script is:inline src='https://unpkg.com/lenis@1.1.18/dist/lenis.min.js'></script>
+
+    <script>
+        // Add type declarations for external libraries
+        declare const gsap: any
+        declare const ScrollTrigger: any
+        declare const Lenis: any
+
+        // Register ScrollTrigger plugin
+        gsap.registerPlugin(ScrollTrigger)
+
+        // Initial entrance animation - slide in from bottom
+        const phoneContainer = document.querySelector('.phone-img-container') as HTMLElement | null
+        const coins = document.querySelectorAll('.coin-floating') as NodeListOf<HTMLElement>
+        const logo = document.querySelector('.logo') as HTMLElement | null
+        const subheader = document.querySelector('.subheader') as HTMLElement | null
+        const ctaButton = document.querySelector('.cta-button') as HTMLElement | null
+        const navbar = document.querySelector('.navbar') as HTMLElement | null
+
+        // Set initial position (off-screen or invisible)
+        gsap.set([phoneContainer, ...coins], {
+            y: '100vh',
+            opacity: 0,
+        })
+
+        gsap.set([logo, subheader, ctaButton], {
+            y: 50,
+            opacity: 0,
+        })
+
+        gsap.set(navbar, {
+            y: -50,
+            opacity: 0,
+        })
+
+        // Create a timeline for the entrance animation
+        const entranceTl = gsap.timeline({
+            onComplete: () => {
+                // Start floating animations after entrance completes
+                startFloatingAnimations()
+            },
+        })
+
+        // Add text, coins and phone to timeline with staggered entrances
+        entranceTl
+            // Logo animation
+            .to(
+                logo,
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1.2,
+                    ease: 'power2.out',
                 },
-            })
+                0,
+            )
+            // Subheader and button animation together
+            .to(
+                [subheader, ctaButton],
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1,
+                    ease: 'power2.out',
+                    stagger: 0.1,
+                },
+                0.3,
+            )
+            // Coins animation
+            .to(
+                coins,
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1.2,
+                    stagger: 0.08,
+                    ease: 'back.out(1.7)',
+                },
+                0.2,
+            )
+            // Phone animation
+            .to(
+                phoneContainer,
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1.4,
+                    ease: 'expo.out',
+                },
+                0.5,
+            )
+            // Navbar animation (last element to come in)
+            .to(
+                navbar,
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1.3,
+                    ease: 'back.out(1.5)',
+                },
+                1.2, // Start after other animations are mostly complete
+            )
 
-            // Add text, coins and phone to timeline with staggered entrances
-            entranceTl
-                // Logo animation
-                .to(
-                    logo,
-                    {
-                        y: 0,
-                        opacity: 1,
-                        duration: 1.2,
-                        ease: 'power2.out',
-                    },
-                    0,
-                )
-                // Subheader animation
-                .to(
-                    subheader,
-                    {
-                        y: 0,
-                        opacity: 1,
-                        duration: 1,
-                        ease: 'power2.out',
-                    },
-                    0.3,
-                )
-                // CTA button animation
-                .to(
-                    ctaButton,
-                    {
-                        y: 0,
-                        opacity: 1,
-                        duration: 0.8,
-                        ease: 'back.out(1.5)',
-                    },
-                    0.5,
-                )
-                // Coins animation
-                .to(
-                    coins,
-                    {
-                        y: 0,
-                        opacity: 1,
-                        duration: 1.4,
-                        stagger: 0.1,
-                        ease: 'back.out(1.7)', // Add slight overshoot
-                    },
-                    0.4,
-                )
-                // Phone animation
-                .to(
-                    phoneContainer,
-                    {
-                        y: 0,
-                        opacity: 1,
-                        duration: 1.6,
-                        ease: 'expo.out', // Smooth deceleration
-                    },
-                    0.9, // Start after text elements have begun animating
-                )
-
-            // Floating animations function (separated to delay until after entrance)
-            function startFloatingAnimations() {
-                gsap.utils.toArray('.coin-floating').forEach((coin: any, i: number) => {
-                    // Vertical movement
-                    gsap.to(coin, {
-                        y: -15 - i * 5,
-                        duration: 3 + i * 0.3,
-                        repeat: -1,
-                        yoyo: true,
-                        ease: 'sine.inOut',
-                        delay: i * 0.2,
-                    })
-
-                    // Rotation
-                    gsap.to(coin, {
-                        rotation: i % 2 === 0 ? 10 : -10,
-                        duration: 4 + i * 0.5,
-                        repeat: -1,
-                        yoyo: true,
-                        ease: 'sine.inOut',
-                        delay: i * 0.3,
-                    })
-
-                    // Slight horizontal movement
-                    gsap.to(coin, {
-                        x: i % 2 === 0 ? 8 : -8,
-                        duration: 5 + i * 0.2,
-                        repeat: -1,
-                        yoyo: true,
-                        ease: 'sine.inOut',
-                        delay: i * 0.1,
-                    })
+        // Floating animations function (separated to delay until after entrance)
+        function startFloatingAnimations() {
+            gsap.utils.toArray('.coin-floating').forEach((coin: any, i: number) => {
+                // Vertical movement
+                gsap.to(coin, {
+                    y: -15 - i * 5,
+                    duration: 3 + i * 0.3,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: 'sine.inOut',
+                    delay: i * 0.2,
                 })
+
+                // Rotation
+                gsap.to(coin, {
+                    rotation: i % 2 === 0 ? 10 : -10,
+                    duration: 4 + i * 0.5,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: 'sine.inOut',
+                    delay: i * 0.3,
+                })
+
+                // Slight horizontal movement
+                gsap.to(coin, {
+                    x: i % 2 === 0 ? 8 : -8,
+                    duration: 5 + i * 0.2,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: 'sine.inOut',
+                    delay: i * 0.1,
+                })
+            })
+        }
+
+        ScrollTrigger.create({
+            trigger: '.intro',
+            start: 'center+=200 center',
+            end: '+=150% top',
+            scrub: 1,
+            onUpdate: (self: any) => {
+                const galleryWrapper = document.querySelector('.gallery-wrapper') as HTMLElement | null
+                const sideCols = document.querySelectorAll('.col:not(.main)')
+                const mainImg = document.querySelector('.img.main img') as HTMLElement | null
+
+                if (!galleryWrapper || !mainImg) return
+
+                const screenWidth = window.innerWidth
+                const maxScale = screenWidth < 900 ? 4 : 2.65
+
+                const scale = 1 + self.progress * maxScale
+                const yTranslate = self.progress * 300
+                const mainImgScale = 2 - self.progress * 0.85
+
+                galleryWrapper.style.transform = `translate(-50%, -50%) scale(${scale})`
+
+                sideCols.forEach((col: Element) => {
+                    ;(col as HTMLElement).style.transform = `translateY(${yTranslate}px)`
+                })
+
+                mainImg.style.transform = `scale(${mainImgScale})`
+            },
+        })
+
+        const lenis = new Lenis()
+        lenis.on('scroll', ScrollTrigger.update)
+
+        gsap.ticker.add((time: number) => {
+            lenis.raf(time * 1000)
+        })
+
+        gsap.ticker.lagSmoothing(0)
+
+        // Add video debugging
+        document.addEventListener('DOMContentLoaded', () => {
+            const video = document.querySelector('.animation-video') as HTMLVideoElement
+            if (video) {
+                console.log('Video element found')
+                video.addEventListener('loadeddata', () => {
+                    console.log('Video data loaded')
+                    // Force play when data is loaded
+                    video.play().catch(e => console.error('Play error:', e))
+                })
+                video.addEventListener('error', e => {
+                    console.error('Video error:', e)
+                })
+                video.addEventListener('canplay', () => {
+                    console.log('Video can play')
+                    video.play().catch(e => console.error('Play error:', e))
+                })
+            } else {
+                console.log('Video element not found')
             }
+        })
 
-            ScrollTrigger.create({
-                trigger: '.ws',
-                start: 'top bottom',
-                end: 'bottom bottom',
-                scrub: 1,
-                onUpdate: (self: any) => {
-                    const galleryWrapper = document.querySelector('.gallery-wrapper') as HTMLElement | null
-                    const sideCols = document.querySelectorAll('.col:not(.main)')
-                    const mainImg = document.querySelector('.img.main img') as HTMLElement | null
+        // Update ScrollTrigger
+        ScrollTrigger.create({
+            trigger: '.all-in-section',
+            start: 'top center',
+            onEnter: () => {
+                const video = document.querySelector('.animation-video') as HTMLVideoElement
+                if (video) {
+                    console.log('Playing video')
+                    video.play().catch(e => console.error('Play error:', e))
+                }
+            },
+            onLeave: () => {
+                const video = document.querySelector('.animation-video') as HTMLVideoElement
+                if (video) {
+                    console.log('Pausing video')
+                    video.pause()
+                }
+            },
+        })
 
-                    if (!galleryWrapper || !mainImg) return
-
-                    const screenWidth = window.innerWidth
-                    const maxScale = screenWidth < 900 ? 4 : 2.65
-
-                    const scale = 1 + self.progress * maxScale
-                    const yTranslate = self.progress * 300
-                    const mainImgScale = 2 - self.progress * 0.85
-
-                    galleryWrapper.style.transform = `translate(-50%, -50%) scale(${scale})`
-
-                    sideCols.forEach((col: Element) => {
-                        ;(col as HTMLElement).style.transform = `translateY(${yTranslate}px)`
-                    })
-
-                    mainImg.style.transform = `scale(${mainImgScale})`
+        // Create ScrollTrigger for text animation
+        const allInTexts = document.querySelectorAll('.all-in-content h1')
+        allInTexts.forEach((text, index) => {
+            gsap.to(text, {
+                opacity: 1,
+                duration: 0.8,
+                scrollTrigger: {
+                    trigger: '.all-in-section',
+                    start: 'top 90%', // Triggers when section is 10% visible
+                    toggleActions: 'play none none reverse',
                 },
+                delay: index * 0.3, // Stagger the animations
             })
+        })
 
-            const lenis = new Lenis()
-            lenis.on('scroll', ScrollTrigger.update)
+        // Add video scaling animation
+        const videoContainer = document.querySelector('.video-container')
+        if (videoContainer) {
+            gsap.fromTo(
+                videoContainer,
+                {
+                    scale: 1.5,
+                    opacity: 0,
+                },
+                {
+                    scale: 1,
+                    opacity: 1,
+                    duration: 1.2,
+                    ease: 'power2.out',
+                    scrollTrigger: {
+                        trigger: '.all-in-section',
+                        start: 'top 50%',
+                        toggleActions: 'play none none reverse',
+                    },
+                },
+            )
+        }
 
-            gsap.ticker.add((time: number) => {
-                lenis.raf(time * 1000)
+        // Update the intro animation
+        const introTimeline = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.intro',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse',
+            },
+        })
+
+        introTimeline
+            .from('.intro-title .blue-text', {
+                x: -100,
+                opacity: 0,
+                duration: 1,
+                ease: 'power2.out',
             })
+            .from(
+                '.intro-title .black-text',
+                {
+                    x: 100,
+                    opacity: 0,
+                    duration: 1,
+                    ease: 'power2.out',
+                },
+                '-=1',
+            ) // Start at same time as blue text
+            .from(
+                '.intro-content',
+                {
+                    y: 50,
+                    opacity: 0,
+                    duration: 1,
+                    ease: 'power2.out',
+                },
+                '-=0.5',
+            )
+            .from(
+                '.intro-button',
+                {
+                    y: 30,
+                    opacity: 0,
+                    duration: 0.8,
+                    ease: 'power2.out',
+                },
+                '-=0.7',
+            )
 
-            gsap.ticker.lagSmoothing(0)
-        </script>
+        // Add ScrollTrigger to hide scroll hint
+        ScrollTrigger.create({
+            trigger: '.all-in-section',
+            start: 'top 95%', // When section is 5% visible
+            onEnter: () => {
+                const scrollHint = document.querySelector('.scroll-hint') as HTMLElement | null
+                if (scrollHint) {
+                    scrollHint.style.opacity = '0'
+                    setTimeout(() => {
+                        scrollHint.style.display = 'none'
+                    }, 300) // Hide after fade out
+                }
+            },
+        })
+    </script>
 
-        <style>
-            .lenis.lenis-smooth [data-lenis-prevent] {
-                overscroll-behavior: contain;
+    <style>
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+
+        .lenis.lenis-stopped {
+            overflow: clip;
+        }
+
+        .lenis.lenis-smooth iframe {
+            pointer-events: none;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 400vh;
+            font-family: 'Inter', system-ui, sans-serif;
+            background-color: #fff5e9;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-wrapper img {
+            border-radius: 32px;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            padding: 0;
+            background-color: #fff5e9;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-family: 'Raleway', 'Inter', system-ui, sans-serif;
+            font-size: 12vw;
+            font-weight: 400;
+            line-height: 1;
+            letter-spacing: -0.025em;
+        }
+
+        p {
+            font-size: 17px;
+            font-weight: 500;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .gallery-wrapper {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1);
+            width: 160vw;
+            height: 100vh;
+            display: flex;
+            gap: 4em;
+        }
+
+        .col {
+            position: relative;
+            flex: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 4em;
+            will-change: transform;
+            border-radius: 32px;
+        }
+
+        .img {
+            flex: 1;
+            overflow: hidden;
+            background-color: #fff;
+            border-radius: 32px;
+        }
+
+        .img.main img {
+            position: relative;
+            transform: scale(2);
+            will-change: transform;
+        }
+
+        .main-content {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+        }
+
+        section {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background-color: #fff5e9;
+            padding: 2em;
+            max-width: 100%;
+        }
+
+        section.intro {
+            padding: 42px;
+            background-color: #fff5e9;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-wrapper {
+            padding: 42px;
+            box-sizing: border-box;
+            background-color: #fff5e9;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+        }
+
+        .hero {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: auto;
+            min-height: 100vh;
+            background-color: transparent;
+            overflow: hidden;
+            box-sizing: border-box;
+            border-radius: 80px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            overflow: hidden;
+            border-radius: 80px;
+        }
+
+        .hero-background img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 80px;
+        }
+
+        .nav-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 60px;
+            z-index: 10;
+            position: relative;
+        }
+
+        .navbar {
+            background-color: #000;
+            border-radius: 50px;
+            padding: 10px 20px;
+            width: fit-content;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 8px 12px;
+            transition: opacity 0.2s;
+        }
+
+        .navbar a:hover {
+            opacity: 0.8;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            z-index: 5;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 180px;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 42px;
+            line-height: 1;
+        }
+
+        .subheader {
+            color: white;
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            max-width: 100%;
+        }
+
+        .cta-button {
+            background-color: white;
+            color: #333;
+            font-weight: 600;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 18px;
+            transition:
+                transform 0.2s,
+                box-shadow 0.2s;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            z-index: 5;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .phone-img-container {
+            margin-top: 40px;
+            position: relative;
+            max-width: 800px;
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 4;
+            margin: 40px auto;
+            padding-bottom: 40px;
+        }
+
+        .phone-image {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 0;
+            position: relative;
+            z-index: 3;
+            margin: 0 auto;
+        }
+
+        .coin-floating {
+            position: absolute;
+            filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.1));
+        }
+
+        .coin-floating img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 0;
+        }
+
+        /* Bottom Right */
+        .coin-1 {
+            width: 300px;
+            height: 300px;
+            bottom: 25%;
+            right: -8%;
+            z-index: 6;
+        }
+
+        /* Top Right */
+        .coin-2 {
+            width: 130px;
+            height: 130px;
+            top: 20%;
+            right: -2%;
+            z-index: 5;
+        }
+
+        /* Top Left */
+        .coin-3 {
+            width: 122px;
+            height: 122px;
+            top: 5%;
+            left: 38%;
+            z-index: 5;
+        }
+
+        /* Bottom Left */
+        .coin-4 {
+            width: 150px;
+            height: 150px;
+            bottom: 30%;
+            left: -1%;
+            z-index: 5;
+        }
+
+        .intro-background {
+            border-radius: 80px;
+            background-color: white;
+            padding: 80px 42px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            min-height: calc(100vh - 84px);
+            overflow: hidden; /* Add this to ensure text doesn't overflow during animation */
+        }
+
+        .intro-header {
+            margin-bottom: 80px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .intro-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            font-size: 120px;
+            font-weight: 900;
+            font-family: 'Raleway', 'Inter', system-ui, sans-serif;
+            line-height: 1;
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden; /* Add this to ensure text doesn't overflow during animation */
+        }
+
+        .intro-title .blue-text,
+        .intro-title .black-text {
+            display: block;
+            will-change: transform, opacity;
+        }
+
+        .intro-title .blue-text {
+            color: #12c4e7;
+        }
+
+        .intro-title .black-text {
+            color: black;
+        }
+
+        .intro-content {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto 80px auto;
+        }
+
+        .intro-content img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .intro-button {
+            background-color: black;
+            color: white;
+            font-weight: 600;
+            padding: 16px 42px;
+            border-radius: 50px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+
+        .intro-button:hover {
+            transform: translateY(-2px);
+        }
+
+        section.intro {
+            padding-top: 0px;
+        }
+
+        @media (max-width: 1400px) {
+            .intro-title {
+                font-size: 100px;
             }
+        }
 
-            .lenis.lenis-stopped {
-                overflow: clip;
+        @media (max-width: 768px) {
+            .intro-title {
+                font-size: 48px;
+                white-space: normal;
             }
-
-            .lenis.lenis-smooth iframe {
-                pointer-events: none;
+            .intro-title span {
+                white-space: normal;
             }
+        }
 
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
+        section.ws {
+            width: 100vw;
+            height: 100vh;
+            background-color: transparent;
+        }
+
+        .footer {
+            position: relative;
+            background-color: #ffffff;
+            padding: 80px 160px;
+            color: #000000;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 80px;
+        }
+
+        .footer-logo {
+            flex: 0 0 auto;
+        }
+
+        .footer-logo img {
+            width: 120px;
+            height: auto;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 120px;
+        }
+
+        .footer-column h3 {
+            font-family: 'Inter', system-ui, sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 16px;
+        }
+
+        .footer-column ul li a {
+            color: #666666;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.2s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: #000000;
+        }
+
+        .footer-disclaimer,
+        .copyright {
+            max-width: 1400px;
+            margin: 0 auto;
+            font-size: 12px;
+            color: #666666;
+            line-height: 1.6;
+        }
+
+        .footer-logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 12px;
+            margin-bottom: 54px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .footer-social img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .email-input-container {
+            display: inline-flex;
+            width: 375px;
+            padding-left: 24px;
+            border-radius: 75px;
+            border: 1px solid #b7b7b7;
+            justify-content: space-between;
+            align-items: center;
+            height: 48px;
+            margin-top: 32px;
+        }
+
+        .email-input {
+            border: none;
+            background: transparent;
+            color: #b7b7b7;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            outline: none;
+            width: 150px;
+        }
+
+        .email-input::placeholder {
+            color: #b7b7b7;
+        }
+
+        .join-waitlist-btn {
+            background-color: #12c4e7;
+            border-radius: 75px;
+            padding: 6px 24px;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            height: 48px;
+            font-family: 'Inter', sans-serif;
+            border: none;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: background-color 0.2s ease;
+        }
+
+        .join-waitlist-btn:hover {
+            background-color: #10b3d3;
+        }
+
+        .copyright {
+            margin-top: 24px;
+            color: #666666;
+        }
+
+        /* Add scroll hint styles */
+        .scroll-hint {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            gap: 0.5rem;
+            z-index: 10;
+            animation: fade 2s ease-in-out infinite alternate;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0.3;
             }
-
-            html,
-            body {
-                width: 100%;
-                height: 1000vh;
-                font-family: 'Inter', system-ui, sans-serif;
-                background-color: #fff5e9;
+            to {
+                opacity: 0.9;
             }
+        }
 
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-
-            .gallery-wrapper img {
-                border-radius: 32px;
-            }
-
-            .sticky {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100vw;
-                height: 100vh;
-                padding: 0;
-                background-color: #fff5e9;
-                overflow: hidden;
-            }
-
-            h1 {
-                font-family: 'Raleway', 'Inter', system-ui, sans-serif;
-                font-size: 12vw;
-                font-weight: 400;
-                line-height: 1;
-                letter-spacing: -0.025em;
-            }
-
-            p {
-                font-size: 17px;
-                font-weight: 500;
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
-            }
-
-            .gallery-wrapper {
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%) scale(1);
-                width: 160vw;
-                height: 100vh;
-                display: flex;
-                gap: 4em;
-            }
-
-            .col {
-                position: relative;
-                flex: 1;
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                gap: 4em;
-                will-change: transform;
-                border-radius: 32px;
-            }
-
-            .img {
-                flex: 1;
-                overflow: hidden;
-                background-color: #fff;
-                border-radius: 32px;
-            }
-
-            .img.main img {
-                position: relative;
-                transform: scale(2);
-                will-change: transform;
-            }
-
-            .main-content {
-                position: relative;
-                z-index: 1;
-                width: 100%;
-                height: 100%;
-            }
-
-            section {
-                position: relative;
-                width: 100vw;
-                height: 100vh;
-                background-color: #e1dedc;
-                padding: 2em;
-                max-width: 100%;
-            }
-
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
             .hero-wrapper {
-                padding: 42px;
-                box-sizing: border-box;
-                background-color: #fff5e9;
-                width: 100%;
-                height: auto;
-                overflow: hidden;
+                padding: 32px;
             }
+        }
 
-            .hero {
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: center;
-                height: auto;
-                min-height: 100vh;
-                background-color: transparent;
-                overflow: hidden;
-                box-sizing: border-box;
-                border-radius: 32px;
-                box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
-            }
-
-            .hero-background {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                z-index: 1;
-                overflow: hidden;
-                border-radius: 80px;
-            }
-
-            .hero-background img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 80px;
-            }
-
-            .nav-container {
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                margin-bottom: 60px;
-                z-index: 10;
-                position: relative;
-            }
-
-            .navbar {
-                background-color: #000;
-                border-radius: 50px;
-                padding: 10px 20px;
-                width: fit-content;
-            }
-
-            .navbar ul {
-                display: flex;
-                list-style: none;
-                gap: 30px;
-            }
-
-            .navbar a {
-                color: white;
-                text-decoration: none;
-                font-size: 16px;
-                font-weight: 500;
-                padding: 8px 12px;
-                transition: opacity 0.2s;
-            }
-
-            .navbar a:hover {
-                opacity: 0.8;
-            }
-
-            .hero-content {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                max-width: 800px;
-                margin: 0 auto;
-                z-index: 5;
-                position: relative;
+        @media (max-width: 768px) {
+            .hero-wrapper {
+                padding: 16px;
             }
 
             .logo {
-                font-size: 180px;
-                font-weight: 900;
-                color: white;
-                margin-bottom: 42px;
-                line-height: 1;
+                font-size: 100px;
             }
 
             .subheader {
-                color: white;
-                font-size: 20px;
-                line-height: 1.6;
-                margin-bottom: 40px;
-                max-width: 100%;
+                font-size: 16px;
             }
 
-            .cta-button {
-                background-color: white;
-                color: #333;
-                font-weight: 600;
-                padding: 14px 32px;
-                border-radius: 50px;
-                text-decoration: none;
-                font-size: 18px;
-                transition:
-                    transform 0.2s,
-                    box-shadow 0.2s;
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-                z-index: 5;
+            .navbar ul {
+                gap: 10px;
             }
 
-            .cta-button:hover {
-                transform: translateY(-2px);
-                box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-            }
-
-            .phone-img-container {
-                margin-top: 40px;
-                position: relative;
-                max-width: 800px;
-                width: 100%;
-                height: auto;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                z-index: 4;
-                margin: 40px auto;
-                padding-bottom: 40px;
-            }
-
-            .phone-image {
-                max-width: 100%;
-                height: auto;
-                object-fit: contain;
-                border-radius: 0;
-                position: relative;
-                z-index: 3;
-                margin: 0 auto;
-            }
-
-            .coin-floating {
-                position: absolute;
-                filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.1));
-            }
-
-            .coin-floating img {
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-                border-radius: 0;
-            }
-
-            /* Bottom Right */
             .coin-1 {
-                width: 300px;
-                height: 300px;
-                bottom: 25%;
-                right: -8%;
-                z-index: 6;
+                width: 180px;
+                height: 180px;
             }
 
-            /* Top Right */
-            .coin-2 {
-                width: 130px;
-                height: 130px;
-                top: 20%;
-                right: -2%;
-                z-index: 5;
-            }
-
-            /* Top Left */
-            .coin-3 {
-                width: 122px;
-                height: 122px;
-                top: 5%;
-                left: 38%;
-                z-index: 5;
-            }
-
-            /* Bottom Left */
+            .coin-2,
+            .coin-3,
             .coin-4 {
-                width: 150px;
-                height: 150px;
-                bottom: 30%;
-                left: -1%;
-                z-index: 5;
+                width: 80px;
+                height: 80px;
             }
 
-            .intro {
-                display: flex;
+            .footer-content {
                 flex-direction: column;
-                justify-content: space-between;
-                align-items: center;
-                text-align: center;
-                padding: 4em 0;
-                background-color: #e1dedc;
-                color: #05364c;
+                gap: 40px;
             }
 
-            .divider {
-                width: 1.5px;
-                height: 30%;
-                background-color: #05364c;
-            }
-
-            section.ws {
-                width: 100vw;
-                height: 600vh;
-                background-color: transparent;
-            }
-
-            .outro {
-                display: flex;
+            .footer-links {
                 flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                background-color: #e1dedc;
-                color: #05364c;
+                gap: 40px;
             }
 
             .footer {
-                position: relative;
-                background-color: #2f4f4f; /* Dark Slate Gray */
+                padding: 42px 24px;
             }
+        }
 
-            /* Add scroll hint styles */
-            .scroll-hint {
-                position: fixed;
-                bottom: 2rem;
-                left: 50%;
-                transform: translateX(-50%);
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                color: rgba(255, 255, 255, 0.7);
-                font-size: 0.9rem;
-                gap: 0.5rem;
-                z-index: 10;
-                animation: fade 2s ease-in-out infinite alternate;
-                pointer-events: none;
-            }
+        section.footer {
+            height: auto;
+        }
 
-            @keyframes fade {
-                from {
-                    opacity: 0.3;
-                }
-                to {
-                    opacity: 0.9;
-                }
-            }
+        .footer-logo {
+            font-size: 42px;
+            font-weight: 900;
+            font-family: 'Raleway', 'Inter', system-ui, sans-serif;
+            color: #12c4e7;
+        }
 
-            /* Responsive adjustments */
-            @media (max-width: 1024px) {
-                .hero-wrapper {
-                    padding: 32px;
-                }
-            }
+        .border {
+            width: 100%;
+            height: 1px;
+            background-color: #000000;
+            margin-bottom: 42px;
+        }
 
-            @media (max-width: 768px) {
-                .hero-wrapper {
-                    padding: 16px;
-                }
+        section.all-in-section {
+            height: auto;
+        }
 
-                .logo {
-                    font-size: 100px;
-                }
+        .all-in-section {
+            padding: 42px;
+            background-color: #fff5e9;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
 
-                .subheader {
-                    font-size: 16px;
-                }
+        .all-in-wrapper {
+            position: relative;
+            width: 100%;
+            border-radius: 80px;
+            overflow: hidden;
+            padding-bottom: 42px;
+        }
 
-                .navbar ul {
-                    gap: 10px;
-                }
+        .all-in-background {
+            width: 100%;
+        }
 
-                .coin-1 {
-                    width: 180px;
-                    height: 180px;
-                }
+        .all-in-background img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 80px;
+        }
 
-                .coin-2,
-                .coin-3,
-                .coin-4 {
-                    width: 80px;
-                    height: 80px;
-                }
-            }
-        </style>
-    </body>
+        .all-in-content {
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            text-align: center;
+            z-index: 2;
+        }
+
+        .all-in-content h1 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 900;
+            font-size: 160px;
+            line-height: 1;
+            color: white;
+            margin: 0;
+            opacity: 0;
+        }
+
+        .all-in-content h1:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .all-in-content h1:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .video-container {
+            position: absolute;
+            bottom: 132px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 1400px;
+            height: auto;
+            z-index: 1;
+            padding: 0;
+            transform-origin: center center;
+        }
+
+        .animation-video {
+            width: 100%;
+            height: auto;
+            border-radius: 32px;
+            object-fit: contain;
+            display: block;
+            pointer-events: none;
+            min-height: 200px;
+            max-height: 100vh;
+            transform-origin: center center;
+        }
+    </style>
 </html>
