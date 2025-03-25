@@ -1,7 +1,11 @@
 ---
 // Import fonts
-import '@fontsource/inter'
-import '@fontsource-variable/raleway'
+import '@fontsource/inter/400.css'
+import '@fontsource/inter/500.css'
+import '@fontsource/inter/600.css'
+import '@fontsource/inter/700.css'
+import '@fontsource/inter/900.css'
+import '@fontsource-variable/raleway/wght.css'
 ---
 
 <html lang='en'>
@@ -10,6 +14,16 @@ import '@fontsource-variable/raleway'
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <title>Pool - Event Funding Simplified</title>
         <link rel='icon' type='image/x-icon' href='/favicon.ico' />
+
+        <!-- Preload critical fonts -->
+        <link
+            rel='preload'
+            href='/fonts/raleway-latin-variable-wghtOnly-normal.woff2'
+            as='font'
+            type='font/woff2'
+            crossorigin
+        />
+        <link rel='preload' href='/fonts/inter-latin-500-normal.woff2' as='font' type='font/woff2' crossorigin />
     </head>
     <body>
         <section class='sticky'>
@@ -54,21 +68,57 @@ import '@fontsource-variable/raleway'
                     </div>
 
                     <div class='nav-container'>
-                        <nav class='navbar'>
-                            <ul>
+                        <!-- Desktop Navigation -->
+                        <nav class='desktop-navbar'>
+                            <ul class='nav-links'>
                                 <li><a href='#'>How it works</a></li>
                                 <li><a href='#'>Join</a></li>
                                 <li><a href='#'>Host</a></li>
                                 <li><a href='#'>Contact Us</a></li>
                             </ul>
                         </nav>
+
+                        <!-- Mobile Hamburger Button -->
+                        <button class='hamburger-menu' aria-label='Menu'>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+
+                    <!-- Mobile Navigation Menu -->
+                    <div class='mobile-nav'>
+                        <div class='mobile-nav-content'>
+                            <button class='close-menu' aria-label='Close Menu'>
+                                <svg
+                                    width='24'
+                                    height='24'
+                                    viewBox='0 0 24 24'
+                                    fill='none'
+                                    xmlns='http://www.w3.org/2000/svg'>
+                                    <path
+                                        d='M18 6L6 18M6 6L18 18'
+                                        stroke='currentColor'
+                                        stroke-width='2'
+                                        stroke-linecap='round'
+                                        stroke-linejoin='round'></path>
+                                </svg>
+                            </button>
+                            <ul>
+                                <li><a href='#'>How it works</a></li>
+                                <li><a href='#'>Join</a></li>
+                                <li><a href='#'>Host</a></li>
+                                <li><a href='#'>Contact Us</a></li>
+                            </ul>
+                            <button class='mobile-nav-cta'>Launch App</button>
+                        </div>
                     </div>
 
                     <div class='hero-content'>
                         <h1 class='logo'>pool</h1>
                         <p class='subheader'>
-                            Pool simplifies event funding—secure sponsors, collect contributions
-                            <br />in any currency, and automate payouts with full transparency.
+                            Pool simplifies event funding—secure sponsors, collect contributions in any currency, and
+                            automate payouts with full transparency.
                         </p>
                         <a href='#' class='cta-button'>Get Started</a>
                     </div>
@@ -101,13 +151,42 @@ import '@fontsource-variable/raleway'
                         </h1>
                     </div>
 
+                    <button class='intro-button'>Launch App</button>
+
                     <div class='intro-content'>
-                        <div class='intro-content-item'>
-                            <img src='/sponsors.png' alt='sponsors' />
+                        <div class='logo-grid'>
+                            <div class='logo-row'>
+                                <img src='/logos/logo1.png' alt='Logo 1' />
+                                <img src='/logos/logo2.png' alt='Logo 2' />
+                                <img src='/logos/logo3.png' alt='Logo 3' />
+                                <img src='/logos/logo4.png' alt='Logo 4' />
+                                <img src='/logos/logo5.png' alt='Logo 5' />
+                                <img src='/logos/logo6.png' alt='Logo 6' />
+                                <img src='/logos/logo7.png' alt='Logo 7' />
+                                <img src='/logos/logo8.png' alt='Logo 8' />
+
+                                <img src='/logos/logo9.png' alt='Logo 9' />
+                                <img src='/logos/logo10.png' alt='Logo 10' />
+                                <img src='/logos/logo11.png' alt='Logo 11' />
+                                <img src='/logos/logo12.png' alt='Logo 12' />
+                                <img src='/logos/logo13.png' alt='Logo 13' />
+                                <img src='/logos/logo14.png' alt='Logo 14' />
+                                <img src='/logos/logo15.png' alt='Logo 15' />
+                                <img src='/logos/logo16.png' alt='Logo 16' />
+                                <img src='/logos/logo17.png' alt='Logo 17' />
+                                <img src='/logos/logo18.png' alt='Logo 18' />
+
+                                <img src='/logos/logo19.png' alt='Logo 19' />
+                                <img src='/logos/logo20.png' alt='Logo 20' />
+                                <img src='/logos/logo21.png' alt='Logo 21' />
+                                <img src='/logos/logo22.png' alt='Logo 22' />
+                                <img src='/logos/logo23.png' alt='Logo 23' />
+                                <img src='/logos/logo24.png' alt='Logo 24' />
+                                <img src='/logos/logo25.png' class='logo-25' alt='Logo 25' />
+                                <img src='/logos/logo26.png' alt='Logo 26' />
+                            </div>
                         </div>
                     </div>
-
-                    <button class='intro-button'>Launch App</button>
                 </div>
             </section>
         </main>
@@ -169,7 +248,7 @@ import '@fontsource-variable/raleway'
                         <h3>Legal</h3>
                         <ul>
                             <li><a href='#'>Pool Hub</a></li>
-                            <li><a href='#'>Terms of Service</a></li>
+                            <li><a href='#'>Terms</a></li>
                             <li><a href='#'>Privacy</a></li>
                         </ul>
                     </div>
@@ -193,7 +272,7 @@ import '@fontsource-variable/raleway'
     </body>
 
     <!-- Add a very subtle visual hint to help users know to scroll -->
-    <div class='scroll-hint'>
+    <!-- <div class='scroll-hint'>
         <span>Scroll to explore</span>
         <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
             <path
@@ -203,7 +282,7 @@ import '@fontsource-variable/raleway'
                 stroke-linecap='round'
                 stroke-linejoin='round'></path>
         </svg>
-    </div>
+    </div> -->
 
     <!-- Load libraries from CDN -->
     <script is:inline src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js'></script>
@@ -225,7 +304,7 @@ import '@fontsource-variable/raleway'
         const logo = document.querySelector('.logo') as HTMLElement | null
         const subheader = document.querySelector('.subheader') as HTMLElement | null
         const ctaButton = document.querySelector('.cta-button') as HTMLElement | null
-        const navbar = document.querySelector('.navbar') as HTMLElement | null
+        const navbar = document.querySelector('.desktop-navbar') as HTMLElement | null
 
         // Set initial position (off-screen or invisible)
         gsap.set([phoneContainer, ...coins], {
@@ -468,66 +547,120 @@ import '@fontsource-variable/raleway'
         const introTimeline = gsap.timeline({
             scrollTrigger: {
                 trigger: '.intro',
-                start: 'top 80%',
+                start: 'top 70%',
                 toggleActions: 'play none none reverse',
             },
         })
 
         introTimeline
             .from('.intro-title .blue-text', {
-                x: -100,
+                x: -200,
                 opacity: 0,
-                duration: 1,
-                ease: 'power2.out',
+                duration: 1.2,
+                ease: 'power3.out',
             })
             .from(
                 '.intro-title .black-text',
                 {
-                    x: 100,
+                    x: 200,
                     opacity: 0,
                     duration: 1,
-                    ease: 'power2.out',
+                    ease: 'power3.out',
                 },
-                '-=1',
-            ) // Start at same time as blue text
-            .from(
-                '.intro-content',
-                {
-                    y: 50,
-                    opacity: 0,
-                    duration: 1,
-                    ease: 'power2.out',
-                },
-                '-=0.5',
+                '-=0.8',
             )
             .from(
                 '.intro-button',
                 {
-                    y: 30,
+                    y: 50,
                     opacity: 0,
-                    duration: 0.8,
+                    duration: 0.4,
                     ease: 'power2.out',
                 },
-                '-=0.7',
+                '-=0.4',
+            )
+            .from(
+                '.intro-content',
+                {
+                    y: 100,
+                    opacity: 0,
+                    duration: 1,
+                    ease: 'power2.out',
+                },
+                '-=0.2',
             )
 
         // Add ScrollTrigger to hide scroll hint
-        ScrollTrigger.create({
-            trigger: '.all-in-section',
-            start: 'top 95%', // When section is 5% visible
-            onEnter: () => {
-                const scrollHint = document.querySelector('.scroll-hint') as HTMLElement | null
-                if (scrollHint) {
-                    scrollHint.style.opacity = '0'
-                    setTimeout(() => {
-                        scrollHint.style.display = 'none'
-                    }, 300) // Hide after fade out
+        // ScrollTrigger.create({
+        //     trigger: '.all-in-section',
+        //     start: 'top 95%', // When section is 5% visible
+        //     onEnter: () => {
+        //         const scrollHint = document.querySelector('.scroll-hint') as HTMLElement | null
+        //         if (scrollHint) {
+        //             scrollHint.style.opacity = '0'
+        //             setTimeout(() => {
+        //                 scrollHint.style.display = 'none'
+        //             }, 300) // Hide after fade out
+        //         }
+        //     },
+        // })
+
+        // Add this to your existing script
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger-menu')
+            const closeButton = document.querySelector('.close-menu')
+            const mobileNav = document.querySelector('.mobile-nav')
+            const body = document.body
+
+            function closeMenu() {
+                hamburger?.classList.remove('active')
+                mobileNav?.classList.remove('active')
+                body.style.overflow = ''
+            }
+
+            function openMenu() {
+                hamburger?.classList.add('active')
+                mobileNav?.classList.add('active')
+                body.style.overflow = 'hidden'
+            }
+
+            hamburger?.addEventListener('click', openMenu)
+            closeButton?.addEventListener('click', closeMenu)
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', e => {
+                const target = e.target as HTMLElement
+                if (
+                    !target.closest('.mobile-nav') &&
+                    !target.closest('.hamburger-menu') &&
+                    mobileNav?.classList.contains('active')
+                ) {
+                    closeMenu()
                 }
-            },
+            })
+
+            // Close mobile menu when clicking a link
+            const mobileLinks = document.querySelectorAll('.mobile-nav a')
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', closeMenu)
+            })
         })
     </script>
 
     <style>
+        /* Ensure fonts load properly */
+        @font-face {
+            font-family: 'Raleway';
+            font-style: normal;
+            font-display: swap;
+            font-weight: 100 900;
+            src: url('/fonts/raleway-latin-variable-wghtOnly-normal.woff2') format('woff2');
+            unicode-range:
+                U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0300-0301, U+0303-0304,
+                U+0308-0309, U+0323, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+                U+FEFF, U+FFFD;
+        }
+
         .lenis.lenis-smooth [data-lenis-prevent] {
             overscroll-behavior: contain;
         }
@@ -568,15 +701,19 @@ import '@fontsource-variable/raleway'
             position: fixed;
             top: 0;
             left: 0;
-            width: 100vw;
+            right: 0;
+            width: 100%;
+            min-width: 100%;
             height: 100vh;
             padding: 0;
+            margin: 0;
             background-color: #fff5e9;
             overflow: hidden;
+            z-index: 0;
         }
 
         h1 {
-            font-family: 'Raleway', 'Inter', system-ui, sans-serif;
+            font-family: 'Raleway', 'Arial', sans-serif;
             font-size: 12vw;
             font-weight: 400;
             line-height: 1;
@@ -595,10 +732,12 @@ import '@fontsource-variable/raleway'
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%) scale(1);
-            width: 160vw;
+            width: 160%;
+            min-width: 160%;
             height: 100vh;
             display: flex;
             gap: 4em;
+            z-index: 0;
         }
 
         .col {
@@ -629,16 +768,23 @@ import '@fontsource-variable/raleway'
             position: relative;
             z-index: 1;
             width: 100%;
+            min-width: 100%;
+            max-width: 100%;
             height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
         }
 
         section {
             position: relative;
-            width: 100vw;
+            width: 100%;
+            min-width: 100%;
             height: 100vh;
-            background-color: #fff5e9;
-            padding: 2em;
-            max-width: 100%;
+            background-color: transparent;
+            padding: 0;
+            margin: 0;
+            overflow-x: hidden;
         }
 
         section.intro {
@@ -650,12 +796,16 @@ import '@fontsource-variable/raleway'
         }
 
         .hero-wrapper {
-            padding: 42px;
+            padding: clamp(20px, 4vw, 42px);
             box-sizing: border-box;
             background-color: #fff5e9;
             width: 100%;
+            min-width: 100%;
+            max-width: 100%;
             height: auto;
             overflow: hidden;
+            margin: 0;
+            position: relative;
         }
 
         .hero {
@@ -669,8 +819,10 @@ import '@fontsource-variable/raleway'
             background-color: transparent;
             overflow: hidden;
             box-sizing: border-box;
-            border-radius: 80px;
+            border-radius: clamp(40px, 6vw, 80px);
             box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            margin: 0;
         }
 
         .hero-background {
@@ -681,49 +833,213 @@ import '@fontsource-variable/raleway'
             height: 100%;
             z-index: 1;
             overflow: hidden;
-            border-radius: 80px;
+            border-radius: clamp(40px, 6vw, 80px);
         }
 
         .hero-background img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 80px;
+            border-radius: clamp(40px, 6vw, 80px);
         }
 
         .nav-container {
             width: 100%;
             display: flex;
             justify-content: center;
-            margin-bottom: 60px;
-            z-index: 10;
-            position: relative;
+            padding: 32px;
+            z-index: 100;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
         }
 
-        .navbar {
-            background-color: #000;
-            border-radius: 50px;
-            padding: 10px 20px;
-            width: fit-content;
-        }
-
-        .navbar ul {
+        /* Desktop Navigation */
+        .desktop-navbar {
             display: flex;
-            list-style: none;
-            gap: 30px;
+            justify-content: center;
+            align-items: center;
+            padding: 12px 24px;
+            border-radius: 50px;
+            background-color: #000;
         }
 
-        .navbar a {
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
             color: white;
             text-decoration: none;
             font-size: 16px;
             font-weight: 500;
-            padding: 8px 12px;
-            transition: opacity 0.2s;
+            transition: opacity 0.2s ease;
         }
 
-        .navbar a:hover {
+        .nav-links a:hover {
             opacity: 0.8;
+        }
+
+        /* Mobile Hamburger Button */
+        .hamburger-menu {
+            display: none;
+            background-color: #000;
+            border: none;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            position: absolute;
+            top: 32px;
+            right: 32px;
+            z-index: 101;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hamburger-menu span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: white;
+            position: absolute;
+            border-radius: 2px;
+            transition: transform 0.3s ease;
+        }
+
+        .hamburger-menu span:nth-child(1) {
+            transform: translateY(-6px);
+        }
+
+        .hamburger-menu span:nth-child(3) {
+            transform: translateY(6px);
+        }
+
+        /* Active hamburger icon */
+        .hamburger-menu.active span:nth-child(1) {
+            transform: rotate(45deg);
+        }
+
+        .hamburger-menu.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger-menu.active span:nth-child(3) {
+            transform: rotate(-45deg);
+        }
+
+        /* Mobile Navigation */
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            left: 100%;
+            width: 100%;
+            height: 100vh;
+            background-color: white;
+            z-index: 100;
+            transition: 0.3s ease;
+        }
+
+        .mobile-nav.active {
+            left: 0;
+        }
+
+        .mobile-nav-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            padding: 80px 40px 40px;
+            position: relative;
+        }
+
+        .close-menu {
+            position: absolute;
+            top: 32px;
+            right: 32px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 102;
+            color: #000;
+        }
+
+        .mobile-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-nav li {
+            margin: 24px 0;
+        }
+
+        .mobile-nav a {
+            color: #000;
+            text-decoration: none;
+            font-size: 32px;
+            font-weight: 600;
+            display: block;
+            padding: 10px 0;
+            transition: opacity 0.2s ease;
+        }
+
+        .mobile-nav a:hover {
+            opacity: 0.7;
+        }
+
+        .mobile-nav-cta {
+            background-color: #000;
+            color: white;
+            border: none;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            width: 100%;
+            max-width: 200px;
+            margin: 40px auto 0;
+        }
+
+        .mobile-nav-cta:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Media query for mobile */
+        @media (max-width: 770px) {
+            .desktop-navbar {
+                display: none;
+            }
+
+            .hamburger-menu {
+                display: flex;
+            }
+        }
+
+        /* Media query for very small screens */
+        @media (max-width: 400px) {
+            .hamburger-menu {
+                top: 20px;
+                right: 20px;
+                width: 32px;
+                height: 32px;
+            }
+
+            .hamburger-menu span {
+                width: 14px;
+            }
+
+            .close-menu {
+                top: 20px;
+                right: 20px;
+            }
         }
 
         .hero-content {
@@ -731,26 +1047,30 @@ import '@fontsource-variable/raleway'
             flex-direction: column;
             align-items: center;
             text-align: center;
-            max-width: 800px;
+            width: 100%;
+            max-width: min(800px, 90%);
             margin: 0 auto;
             z-index: 5;
             position: relative;
+            padding: 120px clamp(20px, 4vw, 40px) 0;
         }
 
         .logo {
-            font-size: 180px;
+            font-family: 'Raleway', 'Arial', sans-serif;
+            font-size: clamp(80px, 15vw, 180px);
             font-weight: 900;
             color: white;
-            margin-bottom: 42px;
+            margin-bottom: clamp(20px, 4vw, 42px);
             line-height: 1;
         }
 
         .subheader {
             color: white;
-            font-size: 20px;
+            font-size: clamp(16px, 2vw, 20px);
             line-height: 1.6;
-            margin-bottom: 40px;
+            margin-bottom: clamp(24px, 4vw, 40px);
             max-width: 100%;
+            padding: 0 20px;
         }
 
         .cta-button {
@@ -774,17 +1094,26 @@ import '@fontsource-variable/raleway'
         }
 
         .phone-img-container {
-            margin-top: 40px;
+            margin-top: clamp(20px, 4vw, 40px);
             position: relative;
-            max-width: 800px;
+            max-width: min(800px, 90%);
             width: 100%;
             height: auto;
             display: flex;
             justify-content: center;
             align-items: center;
             z-index: 4;
-            margin: 40px auto;
-            padding-bottom: 40px;
+            margin: clamp(20px, 4vw, 40px) auto;
+            padding-bottom: clamp(20px, 4vw, 40px);
+        }
+
+        @media (max-width: 768px) {
+            .phone-img-container {
+                max-width: 120%;
+                width: 120%;
+                margin-left: -10%;
+                overflow: visible;
+            }
         }
 
         .phone-image {
@@ -811,26 +1140,26 @@ import '@fontsource-variable/raleway'
 
         /* Bottom Right */
         .coin-1 {
-            width: 300px;
-            height: 300px;
+            width: clamp(150px, 25vw, 300px);
+            height: clamp(150px, 25vw, 300px);
             bottom: 25%;
-            right: -8%;
+            right: min(-8%, -4vw);
             z-index: 6;
         }
 
         /* Top Right */
         .coin-2 {
-            width: 130px;
-            height: 130px;
+            width: clamp(80px, 12vw, 130px);
+            height: clamp(80px, 12vw, 130px);
             top: 20%;
-            right: -2%;
+            right: min(-2%, -1vw);
             z-index: 5;
         }
 
         /* Top Left */
         .coin-3 {
-            width: 122px;
-            height: 122px;
+            width: clamp(70px, 11vw, 122px);
+            height: clamp(70px, 11vw, 122px);
             top: 5%;
             left: 38%;
             z-index: 5;
@@ -838,31 +1167,34 @@ import '@fontsource-variable/raleway'
 
         /* Bottom Left */
         .coin-4 {
-            width: 150px;
-            height: 150px;
+            width: clamp(90px, 13vw, 150px);
+            height: clamp(90px, 13vw, 150px);
             bottom: 30%;
-            left: -1%;
+            left: min(-1%, -0.5vw);
             z-index: 5;
         }
 
         .intro-background {
-            border-radius: 80px;
+            border-radius: clamp(40px, 6vw, 80px);
             background-color: white;
-            padding: 80px 42px;
+            padding: clamp(32px, 5vw, 80px);
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             text-align: center;
             width: 100%;
             min-height: calc(100vh - 84px);
-            overflow: hidden; /* Add this to ensure text doesn't overflow during animation */
+            overflow: hidden;
+            position: relative;
         }
 
         .intro-header {
-            margin-bottom: 80px;
+            margin-bottom: 0px;
+            padding-top: 120px;
             width: 100%;
             display: flex;
+            flex-direction: column;
             justify-content: center;
         }
 
@@ -870,14 +1202,14 @@ import '@fontsource-variable/raleway'
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 20px;
-            font-size: 120px;
+            gap: clamp(12px, 2vw, 20px);
+            font-size: clamp(42px, 8vw, 120px);
             font-weight: 900;
-            font-family: 'Raleway', 'Inter', system-ui, sans-serif;
+            font-family: 'Raleway', 'Arial', sans-serif;
             line-height: 1;
             margin: 0;
             white-space: nowrap;
-            overflow: hidden; /* Add this to ensure text doesn't overflow during animation */
+            overflow: hidden;
         }
 
         .intro-title .blue-text,
@@ -887,7 +1219,7 @@ import '@fontsource-variable/raleway'
         }
 
         .intro-title .blue-text {
-            color: #4078F4;
+            color: #4078f4;
         }
 
         .intro-title .black-text {
@@ -897,13 +1229,15 @@ import '@fontsource-variable/raleway'
         .intro-content {
             width: 100%;
             max-width: 1200px;
-            margin: 0 auto 80px auto;
+            margin-top: auto;
+            margin-bottom: 24px;
         }
 
         .intro-content img {
             width: 100%;
             height: auto;
             object-fit: contain;
+            opacity: 0.3;
         }
 
         .intro-button {
@@ -914,6 +1248,8 @@ import '@fontsource-variable/raleway'
             border-radius: 50px;
             border: none;
             font-size: 18px;
+            width: 200px;
+            margin: auto;
             cursor: pointer;
             transition: transform 0.2s ease;
             font-family: 'Inter', system-ui, sans-serif;
@@ -925,22 +1261,6 @@ import '@fontsource-variable/raleway'
 
         section.intro {
             padding-top: 0px;
-        }
-
-        @media (max-width: 1400px) {
-            .intro-title {
-                font-size: 100px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .intro-title {
-                font-size: 48px;
-                white-space: normal;
-            }
-            .intro-title span {
-                white-space: normal;
-            }
         }
 
         section.ws {
@@ -1084,8 +1404,138 @@ import '@fontsource-variable/raleway'
             color: #666666;
         }
 
+        section.footer {
+            height: auto;
+        }
+
+        .footer-logo {
+            font-size: 42px;
+            font-weight: 900;
+            font-family: 'Raleway', 'Arial', sans-serif;
+            color: #12c4e7;
+        }
+
+        .border {
+            width: 100%;
+            height: 1px;
+            background-color: #000000;
+            margin-bottom: 42px;
+        }
+
+        section.all-in-section {
+            padding: clamp(20px, 4vw, 42px);
+            background-color: #fff5e9;
+            width: 100%;
+            height: 140vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .all-in-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: clamp(40px, 6vw, 80px);
+            overflow: hidden;
+            padding-bottom: clamp(20px, 4vw, 42px);
+        }
+
+        .all-in-background {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            max-height: 1500px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .all-in-background img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            border-radius: clamp(40px, 6vw, 80px);
+            object-fit: cover;
+            max-height: 1500px;
+            overflow: hidden;
+        }
+
+        .all-in-content {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            text-align: center;
+            z-index: 2;
+        }
+
+        .all-in-content h1 {
+            font-family: 'Raleway', 'Arial', sans-serif;
+            font-weight: 900;
+            font-size: clamp(48px, 10vw, 160px);
+            line-height: 1;
+            color: white;
+            margin: 0;
+            opacity: 0;
+        }
+
+        .video-container {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 1400px;
+            height: auto;
+            z-index: 1;
+            padding: 0 clamp(16px, 4vw, 42px);
+            padding-top: 20%;
+            transform-origin: center center;
+            overflow: hidden;
+        }
+
+        .animation-video {
+            width: 100%;
+            height: auto;
+            border-radius: clamp(16px, 4vw, 32px);
+            object-fit: contain;
+            display: block;
+            pointer-events: none;
+            min-height: 200px;
+            max-height: 100vh;
+            transform-origin: center center;
+        }
+
+        .logo-grid {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+        }
+
+        .logo-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        .logo-row img {
+            height: 24px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logo-row img:hover {
+            opacity: 1;
+        }
+
         /* Add scroll hint styles */
-        .scroll-hint {
+        /* .scroll-hint {
             position: fixed;
             bottom: 2rem;
             left: 50%;
@@ -1100,7 +1550,7 @@ import '@fontsource-variable/raleway'
             animation: fade 2s ease-in-out infinite alternate;
             pointer-events: none;
             transition: opacity 0.3s ease;
-        }
+        } */
 
         @keyframes fade {
             from {
@@ -1111,40 +1561,332 @@ import '@fontsource-variable/raleway'
             }
         }
 
+        @media (max-width: 1400px) {
+            .intro-title {
+                font-size: 100px;
+            }
+        }
+        @media (max-width: 1200px) {
+            .logo-row {
+                gap: 24px;
+            }
+            .logo-row img {
+                height: 28px;
+            }
+        }
         /* Responsive adjustments */
         @media (max-width: 1024px) {
             .hero-wrapper {
+                padding: clamp(20px, 4vw, 32px);
+            }
+
+            .hero {
+                border-radius: clamp(40px, 6vw, 80px);
+            }
+        }
+
+        @media (max-width: 1170px) {
+            .intro-title {
+                font-size: 80px;
+            }
+        }
+
+        @media (max-width: 1050px) {
+            .intro-title {
+                font-size: 60px;
+                white-space: normal;
+            }
+            .intro-title span {
+                white-space: normal;
+            }
+        }
+
+        @media (max-width: 950px) {
+            section.intro {
                 padding: 32px;
+            }
+        }
+
+        @media (max-width: 770px) {
+            section.intro {
+                padding: 16px;
+                padding-top: 0px;
+            }
+
+            .intro-background {
+                padding: clamp(24px, 4vw, 42px);
+            }
+
+            .intro-header {
+                margin-bottom: 0px;
+            }
+
+            .intro-button {
+                margin-top: 0px;
+                width: auto;
+                min-width: 200px;
+                padding: 12px 32px;
+                font-size: 16px;
+            }
+
+            .intro-content {
+                margin-bottom: 64px;
+            }
+
+            .logo-row {
+                gap: 24px;
+            }
+            .logo-row img {
+                height: 24px;
+            }
+
+            section.all-in-section {
+                padding: clamp(16px, 3vw, 24px);
+                height: 90vh;
+                min-height: unset;
+            }
+
+            .all-in-wrapper {
+                height: 100%;
+                padding-bottom: 0;
+            }
+
+            .all-in-content {
+                padding-top: 20%;
+            }
+
+            .all-in-content h1 {
+                font-size: clamp(42px, 8vw, 80px);
+            }
+
+            .video-container {
+                bottom: 0%;
+                padding: 0;
+                width: 120%;
+                left: 50%;
+                transform: translateX(-50%);
+                max-width: none;
+                overflow: hidden;
+            }
+
+            .animation-video {
+                width: 100%;
+                border-radius: clamp(16px, 4vw, 32px);
             }
         }
 
         @media (max-width: 768px) {
             .hero-wrapper {
-                padding: 16px;
+                padding: clamp(16px, 3vw, 24px);
             }
 
-            .logo {
-                font-size: 100px;
+            .hero-content {
+                padding-left: 0;
+                padding-right: 0;
             }
 
-            .subheader {
-                font-size: 16px;
+            .nav-container {
+                margin-bottom: 30px;
+            }
+
+            .navbar {
+                width: calc(100% - 40px);
+                justify-content: flex-start;
             }
 
             .navbar ul {
-                gap: 10px;
+                justify-content: flex-start;
+                padding: 0 10px;
+            }
+
+            .phone-img-container {
+                margin-top: 64px;
+            }
+
+            .subheader {
+                font-size: 14px;
+                padding: 0;
+            }
+
+            .subheader br {
+                display: none;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .blue-text,
+            .black-text {
+                font-size: 40px;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .intro-button {
+                width: 80%;
+                padding: 10px 32px;
+                border-radius: 50px;
+                font-size: 16px;
+            }
+
+            .intro-button:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+            }
+
+            section.intro {
+                padding: 16px;
+                padding-top: 0px;
+            }
+
+            .logo-grid {
+                gap: 24px;
+            }
+
+            .logo-row {
+                gap: 16px;
+            }
+
+            .logo-row img {
+                height: 16px;
+            }
+
+            .intro-header {
+                padding-top: 64px;
+                margin-bottom: 0px;
+            }
+
+            .intro-content {
+                margin-bottom: 24px;
+            }
+
+            .intro-button {
+                margin-top: 0px;
+                width: 80%;
+                padding: 10px 24px;
+                font-size: 15px;
+            }
+
+            .intro-button:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-wrapper {
+                padding: 12px;
+            }
+
+            .hero {
+                border-radius: 40px;
+            }
+
+            .nav-container {
+                margin-bottom: 20px;
+            }
+
+            .navbar {
+                padding: 6px 10px;
+            }
+
+            .navbar a {
+                padding: 6px 8px;
             }
 
             .coin-1 {
-                width: 180px;
-                height: 180px;
+                width: 120px;
+                height: 120px;
+                right: -2%;
             }
 
-            .coin-2,
-            .coin-3,
+            .coin-2 {
+                width: 60px;
+                height: 60px;
+            }
+
+            .coin-3 {
+                width: 50px;
+                height: 50px;
+            }
+
             .coin-4 {
-                width: 80px;
-                height: 80px;
+                width: 70px;
+                height: 70px;
+            }
+
+            section.intro {
+                padding: 12px;
+                padding-top: 0px;
+            }
+
+            .intro-background {
+                padding: 20px;
+                border-radius: 32px;
+            }
+
+            .intro-button {
+                margin-top: 0px;
+                width: 80%;
+                padding: 10px 24px;
+                font-size: 15px;
+            }
+
+            .intro-button:hover,
+            .cta-button:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+            }
+
+            .cta-button {
+                width: 80%;
+                padding: 10px 32px;
+                border-radius: 50px;
+                font-size: 16px;
+            }
+
+            .logo-row {
+                gap: 16px;
+            }
+
+            .logo-row img {
+                height: 20px;
+            }
+
+            section.all-in-section {
+                padding: 12px;
+            }
+
+            .all-in-wrapper {
+                border-radius: 32px;
+            }
+
+            .all-in-background img {
+                border-radius: 32px;
+            }
+
+            .all-in-content {
+                top: 17%;
+            }
+
+            .all-in-content h1 {
+                font-size: 64px;
+                padding-top: 4%;
+            }
+
+            .video-container {
+                bottom: 0%;
+                width: 130%;
+                overflow: hidden;
+            }
+
+            .animation-video {
+                border-radius: 24px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            section.footer {
+                padding: 40px 24px;
             }
 
             .footer-content {
@@ -1152,117 +1894,64 @@ import '@fontsource-variable/raleway'
                 gap: 40px;
             }
 
+            .footer-logo-container {
+                margin-bottom: 0;
+            }
+
             .footer-links {
-                flex-direction: column;
                 gap: 40px;
+                flex-wrap: wrap;
             }
 
-            .footer {
-                padding: 42px 24px;
+            .footer-column {
+                flex: 1;
+                min-width: 120px;
+            }
+
+            .email-input-container {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .email-input {
+                width: 100%;
             }
         }
 
-        section.footer {
-            height: auto;
-        }
+        @media (max-width: 480px) {
+            section.footer {
+                padding: 32px 20px;
+            }
 
-        .footer-logo {
-            font-size: 42px;
-            font-weight: 900;
-            font-family: 'Raleway', 'Inter', system-ui, sans-serif;
-            color: #12c4e7;
-        }
+            .footer-links {
+                gap: 32px;
+            }
 
-        .border {
-            width: 100%;
-            height: 1px;
-            background-color: #000000;
-            margin-bottom: 42px;
-        }
+            .footer-column h3 {
+                margin-bottom: 16px;
+            }
 
-        section.all-in-section {
-            height: auto;
-        }
+            .footer-column ul li {
+                margin-bottom: 12px;
+            }
 
-        .all-in-section {
-            padding: 42px;
-            background-color: #fff5e9;
-            width: 100%;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-        }
+            .email-input-container {
+                height: 44px;
+            }
 
-        .all-in-wrapper {
-            position: relative;
-            width: 100%;
-            border-radius: 80px;
-            overflow: hidden;
-            padding-bottom: 42px;
-        }
+            .join-waitlist-btn {
+                height: 44px;
+                padding: 6px 20px;
+                font-size: 13px;
+            }
 
-        .all-in-background {
-            width: 100%;
-        }
+            .email-input {
+                font-size: 13px;
+            }
 
-        .all-in-background img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 80px;
-        }
-
-        .all-in-content {
-            position: absolute;
-            top: 25%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
-            text-align: center;
-            z-index: 2;
-        }
-
-        .all-in-content h1 {
-            font-family: 'Raleway', sans-serif;
-            font-weight: 900;
-            font-size: 160px;
-            line-height: 1;
-            color: white;
-            margin: 0;
-            opacity: 0;
-        }
-
-        .all-in-content h1:nth-child(2) {
-            animation-delay: 0.3s;
-        }
-
-        .all-in-content h1:nth-child(3) {
-            animation-delay: 0.6s;
-        }
-
-        .video-container {
-            position: absolute;
-            bottom: 132px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%;
-            max-width: 1400px;
-            height: auto;
-            z-index: 1;
-            padding: 0;
-            transform-origin: center center;
-        }
-
-        .animation-video {
-            width: 100%;
-            height: auto;
-            border-radius: 32px;
-            object-fit: contain;
-            display: block;
-            pointer-events: none;
-            min-height: 200px;
-            max-height: 100vh;
-            transform-origin: center center;
+            .footer-disclaimer {
+                font-size: 11px;
+            }
         }
     </style>
 </html>
