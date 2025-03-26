@@ -15,14 +15,15 @@ import '@fontsource-variable/raleway/wght.css'
         <title>Pool - Event Funding Simplified</title>
         <link rel='icon' type='image/x-icon' href='/favicon.ico' />
 
-        <!-- Preload critical fonts -->
+        <!-- Preconnect to Google Fonts -->
+        <link rel='preconnect' href='https://fonts.googleapis.com' />
+        <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
         <link
-            rel='preload'
-            href='/fonts/raleway-latin-variable-wghtOnly-normal.woff2'
-            as='font'
-            type='font/woff2'
-            crossorigin
+            href='https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap'
+            rel='stylesheet'
         />
+
+        <!-- Preload critical fonts -->
         <link rel='preload' href='/fonts/inter-latin-500-normal.woff2' as='font' type='font/woff2' crossorigin />
     </head>
     <body>
@@ -72,9 +73,9 @@ import '@fontsource-variable/raleway/wght.css'
                         <nav class='desktop-navbar'>
                             <ul class='nav-links'>
                                 <li><a href='#'>How it works</a></li>
-                                <li><a href='#'>Join</a></li>
+                                <li><a href='https://app.poolparty.cc'>Join</a></li>
                                 <li><a href='#'>Host</a></li>
-                                <li><a href='#'>Contact Us</a></li>
+                                <li><a href='https://t.me/poolpartycc'>Contact Us</a></li>
                             </ul>
                         </nav>
 
@@ -106,11 +107,11 @@ import '@fontsource-variable/raleway/wght.css'
                             </button>
                             <ul>
                                 <li><a href='#'>How it works</a></li>
-                                <li><a href='#'>Join</a></li>
+                                <li><a href='https://app.poolparty.cc'>Join</a></li>
                                 <li><a href='#'>Host</a></li>
-                                <li><a href='#'>Contact Us</a></li>
+                                <li><a href='https://t.me/poolpartycc'>Contact Us</a></li>
                             </ul>
-                            <button class='mobile-nav-cta'>Launch App</button>
+                            <a href='https://app.poolparty.cc' class='mobile-nav-cta'>Launch App</a>
                         </div>
                     </div>
 
@@ -120,23 +121,60 @@ import '@fontsource-variable/raleway/wght.css'
                             Pool simplifies event funding—secure sponsors, collect contributions in any currency, and
                             automate payouts with full transparency.
                         </p>
-                        <a href='#' class='cta-button'>Get Started</a>
+                        <a href='https://app.poolparty.cc' class='cta-button'>Launch App</a>
                     </div>
 
                     <div class='phone-img-container'>
-                        <img src='/mobile-hero.svg' alt='Pool app on mobile phones' class='phone-image' />
+                        <img
+                            src='/mobile-hero.png'
+                            alt='Pool app on mobile phones'
+                            class='phone-image'
+                            width='800'
+                            height='1200'
+                            loading='eager'
+                            decoding='async'
+                            fetchpriority='high'
+                        />
 
                         <div class='coin-floating coin-1'>
-                            <img src='/br-coin.svg' alt='USD Coin' />
+                            <img
+                                src='/br-coin.png'
+                                alt='USD Coin'
+                                width='300'
+                                height='300'
+                                loading='eager'
+                                decoding='async'
+                            />
                         </div>
                         <div class='coin-floating coin-2'>
-                            <img src='/tr-coin.svg' alt='Ethereum' />
+                            <img
+                                src='/tr-coin.png'
+                                alt='Ethereum'
+                                width='130'
+                                height='130'
+                                loading='eager'
+                                decoding='async'
+                            />
                         </div>
                         <div class='coin-floating coin-3'>
-                            <img src='/tl-coin.svg' alt='USD Coin' />
+                            <img
+                                src='/tl-coin.png'
+                                alt='USD Coin'
+                                width='122'
+                                height='122'
+                                loading='eager'
+                                decoding='async'
+                            />
                         </div>
                         <div class='coin-floating coin-4'>
-                            <img src='/bl-coin.svg' alt='USD Coin' />
+                            <img
+                                src='/bl-coin.png'
+                                alt='USD Coin'
+                                width='150'
+                                height='150'
+                                loading='eager'
+                                decoding='async'
+                            />
                         </div>
                     </div>
                 </section>
@@ -216,12 +254,16 @@ import '@fontsource-variable/raleway/wght.css'
                 <div class='footer-logo-container'>
                     <div class='footer-logo'>pool</div>
                     <div class='footer-social'>
-                        <a href='#'><img src='/x-icon.svg' alt='X Icon' /></a>
-                        <a href='#'><img src='/telegram-icon.svg' alt='Telegram Icon' /></a>
+                        <a href='https://x.com/PartyWithPool'><img src='/x-icon.svg' alt='X Icon' /></a>
+                        <a href='https://t.me/poolpartycc'><img src='/telegram-icon.svg' alt='Telegram Icon' /></a>
                     </div>
-                    <div class='email-input-container'>
-                        <input type='email' class='email-input' placeholder='Enter your email' />
-                        <button class='join-waitlist-btn'>Join our waitlist</button>
+
+                    <div class='email-section'>
+                        <div class='email-ask'>Want to use pool at your next event?</div>
+                        <div class='email-input-container'>
+                            <input type='email' class='email-input' placeholder='Enter your email' />
+                            <button class='join-waitlist-btn'>Join our waitlist</button>
+                        </div>
                     </div>
                 </div>
 
@@ -229,17 +271,17 @@ import '@fontsource-variable/raleway/wght.css'
                     <div class='footer-column'>
                         <h3>Play</h3>
                         <ul>
-                            <li><a href='#'>Party with Pool</a></li>
+                            <li><a href='https://x.com/PartyWithPool'>Party with Pool</a></li>
                             <li><a href='#'>Documentation</a></li>
-                            <li><a href='#'>Application</a></li>
+                            <li><a href='https://app.poolparty.cc'>Application</a></li>
                         </ul>
                     </div>
 
                     <div class='footer-column'>
                         <h3>Community</h3>
                         <ul>
-                            <li><a href='#'>Lu.ma</a></li>
-                            <li><a href='#'>Support</a></li>
+                            <li><a href='https://lu.ma/user/partywithpool'>Lu.ma</a></li>
+                            <li><a href='https://t.me/poolpartycc'>Support</a></li>
                             <li><a href='#'>FAQs</a></li>
                         </ul>
                     </div>
@@ -648,29 +690,26 @@ import '@fontsource-variable/raleway/wght.css'
     </script>
 
     <style>
-        /* Ensure fonts load properly */
-        @font-face {
-            font-family: 'Raleway';
+        /* Font definitions */
+        .raleway-black {
+            font-family: 'Raleway', sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 900;
             font-style: normal;
-            font-display: swap;
-            font-weight: 100 900;
-            src: url('/fonts/raleway-latin-variable-wghtOnly-normal.woff2') format('woff2');
-            unicode-range:
-                U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0300-0301, U+0303-0304,
-                U+0308-0309, U+0323, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-                U+FEFF, U+FFFD;
         }
 
-        .lenis.lenis-smooth [data-lenis-prevent] {
-            overscroll-behavior: contain;
+        .raleway-bold {
+            font-family: 'Raleway', sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
         }
 
-        .lenis.lenis-stopped {
-            overflow: clip;
-        }
-
-        .lenis.lenis-smooth iframe {
-            pointer-events: none;
+        .raleway-regular {
+            font-family: 'Raleway', sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
         }
 
         * {
@@ -685,6 +724,35 @@ import '@fontsource-variable/raleway/wght.css'
             height: 400vh;
             font-family: 'Inter', system-ui, sans-serif;
             background-color: #fff5e9;
+        }
+
+        /* Update all Raleway font instances to use the new classes */
+        h1,
+        .logo,
+        .footer-logo {
+            font-family: 'Raleway', sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 800;
+            font-style: normal;
+        }
+
+        .logo {
+            color: white;
+            font-weight: 800;
+        }
+
+        .intro-title {
+            font-family: 'Raleway', sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 900;
+            font-style: normal;
+        }
+
+        .all-in-content h1 {
+            font-family: 'Raleway', sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 900;
+            font-style: normal;
         }
 
         img {
@@ -713,9 +781,7 @@ import '@fontsource-variable/raleway/wght.css'
         }
 
         h1 {
-            font-family: 'Raleway', 'Arial', sans-serif;
             font-size: 12vw;
-            font-weight: 400;
             line-height: 1;
             letter-spacing: -0.025em;
         }
@@ -1056,12 +1122,13 @@ import '@fontsource-variable/raleway/wght.css'
         }
 
         .logo {
-            font-family: 'Raleway', 'Arial', sans-serif;
             font-size: clamp(80px, 15vw, 180px);
-            font-weight: 900;
-            color: white;
             margin-bottom: clamp(20px, 4vw, 42px);
             line-height: 1;
+        }
+
+        .logo-25 {
+            padding: 5px;
         }
 
         .subheader {
@@ -1105,15 +1172,9 @@ import '@fontsource-variable/raleway/wght.css'
             z-index: 4;
             margin: clamp(20px, 4vw, 40px) auto;
             padding-bottom: clamp(20px, 4vw, 40px);
-        }
-
-        @media (max-width: 768px) {
-            .phone-img-container {
-                max-width: 120%;
-                width: 120%;
-                margin-left: -10%;
-                overflow: visible;
-            }
+            transform: translateZ(0);
+            -webkit-transform: translateZ(0);
+            will-change: transform;
         }
 
         .phone-image {
@@ -1124,6 +1185,14 @@ import '@fontsource-variable/raleway/wght.css'
             position: relative;
             z-index: 3;
             margin: 0 auto;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+
+        @supports (font: -apple-system-body) and (-webkit-appearance: none) {
+            .phone-image {
+                image-rendering: auto;
+            }
         }
 
         .coin-floating {
@@ -1136,6 +1205,11 @@ import '@fontsource-variable/raleway/wght.css'
             height: 100%;
             object-fit: contain;
             border-radius: 0;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+            transform: translateZ(0);
+            -webkit-transform: translateZ(0);
+            will-change: transform;
         }
 
         /* Bottom Right */
@@ -1216,6 +1290,8 @@ import '@fontsource-variable/raleway/wght.css'
         .intro-title .black-text {
             display: block;
             will-change: transform, opacity;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 800;
         }
 
         .intro-title .blue-text {
@@ -1286,6 +1362,7 @@ import '@fontsource-variable/raleway/wght.css'
 
         .footer-logo {
             flex: 0 0 auto;
+            font-weight: 800;
         }
 
         .footer-logo img {
@@ -1296,6 +1373,7 @@ import '@fontsource-variable/raleway/wght.css'
         .footer-links {
             display: flex;
             gap: 120px;
+            padding-top: 24px;
         }
 
         .footer-column h3 {
@@ -1351,6 +1429,14 @@ import '@fontsource-variable/raleway/wght.css'
         .footer-social img {
             width: 24px;
             height: 24px;
+        }
+
+        .email-ask {
+            display: flex;
+            flex-direction: column;
+            margin-top: 24px;
+            gap: -12px;
+            margin-bottom: -12px;
         }
 
         .email-input-container {
@@ -1410,7 +1496,7 @@ import '@fontsource-variable/raleway/wght.css'
 
         .footer-logo {
             font-size: 42px;
-            font-weight: 900;
+            font-weight: 800;
             font-family: 'Raleway', 'Arial', sans-serif;
             color: #12c4e7;
         }
@@ -1473,7 +1559,7 @@ import '@fontsource-variable/raleway/wght.css'
 
         .all-in-content h1 {
             font-family: 'Raleway', 'Arial', sans-serif;
-            font-weight: 900;
+            font-weight: 800;
             font-size: clamp(48px, 10vw, 160px);
             line-height: 1;
             color: white;
@@ -1566,12 +1652,23 @@ import '@fontsource-variable/raleway/wght.css'
                 font-size: 100px;
             }
         }
+
+        @media (max-width: 1300px) {
+            .footer-links {
+                gap: 60px;
+            }
+        }
+
         @media (max-width: 1200px) {
             .logo-row {
                 gap: 24px;
             }
             .logo-row img {
                 height: 28px;
+            }
+
+            section.footer {
+                padding: 42px 80px;
             }
         }
         /* Responsive adjustments */
@@ -1604,6 +1701,12 @@ import '@fontsource-variable/raleway/wght.css'
         @media (max-width: 950px) {
             section.intro {
                 padding: 32px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 0;
+                margin-bottom: 42px;
             }
         }
 
@@ -1683,6 +1786,7 @@ import '@fontsource-variable/raleway/wght.css'
             .hero-content {
                 padding-left: 0;
                 padding-right: 0;
+                padding-top: 84px;
             }
 
             .nav-container {
@@ -1700,6 +1804,10 @@ import '@fontsource-variable/raleway/wght.css'
             }
 
             .phone-img-container {
+                max-width: 120%;
+                width: 120%;
+                margin-left: -10%;
+                overflow: visible;
                 margin-top: 64px;
             }
 
@@ -1710,6 +1818,33 @@ import '@fontsource-variable/raleway/wght.css'
 
             .subheader br {
                 display: none;
+            }
+
+            section.footer {
+                padding: 40px 24px;
+            }
+
+            .footer-logo-container {
+                margin-bottom: 0;
+            }
+
+            .footer-links {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+
+            .footer-column {
+                flex: 1;
+                min-width: 120px;
+            }
+
+            .email-input-container {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .email-input {
+                width: 100%;
             }
         }
 
@@ -1751,8 +1886,13 @@ import '@fontsource-variable/raleway/wght.css'
             }
 
             .intro-header {
-                padding-top: 64px;
+                padding-top: 42px;
                 margin-bottom: 0px;
+            }
+
+            .blue-text,
+            .black-text {
+                font-size: 36px;
             }
 
             .intro-content {
@@ -1882,43 +2022,7 @@ import '@fontsource-variable/raleway/wght.css'
             .animation-video {
                 border-radius: 24px;
             }
-        }
 
-        @media (max-width: 768px) {
-            section.footer {
-                padding: 40px 24px;
-            }
-
-            .footer-content {
-                flex-direction: column;
-                gap: 40px;
-            }
-
-            .footer-logo-container {
-                margin-bottom: 0;
-            }
-
-            .footer-links {
-                gap: 40px;
-                flex-wrap: wrap;
-            }
-
-            .footer-column {
-                flex: 1;
-                min-width: 120px;
-            }
-
-            .email-input-container {
-                width: 100%;
-                max-width: 100%;
-            }
-
-            .email-input {
-                width: 100%;
-            }
-        }
-
-        @media (max-width: 480px) {
             section.footer {
                 padding: 32px 20px;
             }
